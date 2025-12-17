@@ -1,0 +1,87 @@
+{
+"skeleton": {
+	"hash": "pQkHy3jyDixsESaycaksTEYNBZU",
+	"spine": "3.8.75",
+	"x": -150,
+	"y": -150,
+	"width": 300,
+	"height": 300,
+	"images": "./res/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "addClick_000", "bone": "root", "attachment": "addClick_017" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"addClick_000": {
+				"addClick_000": { "width": 300, "height": 300 },
+				"addClick_001": { "width": 300, "height": 300 },
+				"addClick_002": { "width": 300, "height": 300 },
+				"addClick_003": { "width": 300, "height": 300 },
+				"addClick_004": { "width": 300, "height": 300 },
+				"addClick_005": { "width": 300, "height": 300 },
+				"addClick_006": { "width": 300, "height": 300 },
+				"addClick_007": { "width": 300, "height": 300 },
+				"addClick_008": { "width": 300, "height": 300 },
+				"addClick_009": { "width": 300, "height": 300 },
+				"addClick_010": { "width": 300, "height": 300 },
+				"addClick_012": { "width": 300, "height": 300 },
+				"addClick_013": { "width": 300, "height": 300 },
+				"addClick_014": { "width": 300, "height": 300 },
+				"addClick_015": { "width": 300, "height": 300 },
+				"addClick_016": { "width": 300, "height": 300 },
+				"addClick_017": { "width": 300, "height": 300 },
+				"addClick_018": { "width": 300, "height": 300 }
+			}
+		}
+	}
+],
+"events": {
+	"ani_end": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"addClick_000": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.0333, "name": "addClick_001" },
+					{ "time": 0.0667, "name": "addClick_002" },
+					{ "time": 0.1, "name": "addClick_003" },
+					{ "time": 0.1333, "name": "addClick_004" },
+					{ "time": 0.1667, "name": "addClick_005" },
+					{ "time": 0.2, "name": "addClick_006" },
+					{ "time": 0.2333, "name": "addClick_007" },
+					{ "time": 0.2667, "name": "addClick_008" },
+					{ "time": 0.3, "name": "addClick_009" },
+					{ "time": 0.3333, "name": "addClick_010" },
+					{ "time": 0.3667, "name": "addClick_018" },
+					{ "time": 0.4, "name": "addClick_012" },
+					{ "time": 0.4333, "name": "addClick_013" },
+					{ "time": 0.4667, "name": "addClick_014" },
+					{ "time": 0.5, "name": "addClick_015" },
+					{ "time": 0.5333, "name": "addClick_016" },
+					{ "time": 0.5667, "name": "addClick_017" },
+					{ "time": 0.6, "name": "addClick_018" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"shear": [
+					{ "time": 0.3333, "y": 0.17 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.5667, "name": "ani_end" }
+		]
+	}
+}
+}

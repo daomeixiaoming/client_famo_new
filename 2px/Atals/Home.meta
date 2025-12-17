@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.3",
+  "uuid": "b2f8d5a0-716b-44d2-9b9e-07bec942034a",
+  "importer": "folder",
+  "isBundle": true,
+  "bundleName": "Atals_Home",
+  "priority": 1,
+  "compressionType": {},
+  "optimizeHotUpdate": {},
+  "inlineSpriteFrames": {},
+  "isRemoteBundle": {},
+  "subMetas": {}
+}

@@ -1,0 +1,14 @@
+<!--
+ * @Author: eycode
+ * @Date: 2021-08-04 11:24:53
+ * @LastEditTime: 2025-08-29 17:01:37
+ * @LastEditors: gongqinying (eycodes@gmail.com)
+ * @Description: 面板
+ * @Other: 
+-->
+
+<div class='main'>
+    <h2>{{titleLabel}}</h2>
+    <ui-prop name="启用" type="boolean" v-value="enabled" tooltip="· 项目构建完成后自动打包bundle分包"></ui-prop>
+    <ui-button class="button blue big" @click="onApplyBtnClick" v-disabled="isProcessing">{{applyLabel}}</ui-button>
+</div>

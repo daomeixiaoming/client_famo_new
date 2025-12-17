@@ -1,0 +1,82 @@
+{
+"skeleton": {
+	"hash": "I+3L+a5XKGa2EzBSzIh4XssXQSE",
+	"spine": "3.8.75",
+	"x": -188,
+	"y": -190,
+	"width": 376,
+	"height": 380,
+	"images": "./res/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "add500_000", "bone": "root", "attachment": "add500_015" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"add500_000": {
+				"add500_000": { "width": 376, "height": 380 },
+				"add500_001": { "width": 376, "height": 380 },
+				"add500_002": { "width": 376, "height": 380 },
+				"add500_003": { "width": 376, "height": 380 },
+				"add500_004": { "width": 376, "height": 380 },
+				"add500_005": { "width": 376, "height": 380 },
+				"add500_006": { "width": 376, "height": 380 },
+				"add500_007": { "width": 376, "height": 380 },
+				"add500_008": { "width": 376, "height": 380 },
+				"add500_009": { "width": 376, "height": 380 },
+				"add500_010": { "width": 376, "height": 380 },
+				"add500_011": { "width": 376, "height": 380 },
+				"add500_012": { "width": 376, "height": 380 },
+				"add500_013": { "width": 376, "height": 380 },
+				"add500_014": { "width": 376, "height": 380 },
+				"add500_015": { "width": 376, "height": 380 }
+			}
+		}
+	}
+],
+"events": {
+	"atk_500": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"add500_000": {
+				"attachment": [
+					{ "name": "add500_000" },
+					{ "time": 0.0333, "name": "add500_001" },
+					{ "time": 0.0667, "name": "add500_002" },
+					{ "time": 0.1, "name": "add500_003" },
+					{ "time": 0.1333, "name": "add500_004" },
+					{ "time": 0.1667, "name": "add500_005" },
+					{ "time": 0.2, "name": "add500_006" },
+					{ "time": 0.2333, "name": "add500_007" },
+					{ "time": 0.2667, "name": "add500_008" },
+					{ "time": 0.3, "name": "add500_009" },
+					{ "time": 0.3333, "name": "add500_010" },
+					{ "time": 0.3667, "name": "add500_011" },
+					{ "time": 0.4, "name": "add500_012" },
+					{ "time": 0.4333, "name": "add500_013" },
+					{ "time": 0.4667, "name": "add500_014" },
+					{ "time": 0.5, "name": "add500_015" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{ "x": 2, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.5, "name": "atk_500" }
+		]
+	}
+}
+}

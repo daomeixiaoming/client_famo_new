@@ -1,0 +1,77 @@
+{
+"skeleton": {
+	"hash": "d8ktae33iZ/Xb8iH0p316FUrcJ8",
+	"spine": "3.8.75",
+	"x": -187,
+	"y": -190,
+	"width": 375,
+	"height": 380,
+	"images": "./res/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "add5000_000", "bone": "root", "attachment": "add5000_017" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"add5000_000": {
+				"add5000_000": { "width": 375, "height": 380 },
+				"add5000_001": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_002": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_003": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_004": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_006": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_007": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_008": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_009": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_010": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_011": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_012": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_013": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_014": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_015": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_016": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_017": { "x": 0.5, "width": 375, "height": 380 },
+				"add5000_018": { "x": 0.5, "width": 376, "height": 380 }
+			}
+		}
+	}
+],
+"events": {
+	"atk_end": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"add5000_000": {
+				"attachment": [
+					{ "name": "add5000_000" },
+					{ "time": 0.0333, "name": "add5000_001" },
+					{ "time": 0.0667, "name": "add5000_002" },
+					{ "time": 0.1, "name": "add5000_003" },
+					{ "time": 0.1333, "name": "add5000_004" },
+					{ "time": 0.1667, "name": "add5000_006" },
+					{ "time": 0.2, "name": "add5000_007" },
+					{ "time": 0.2333, "name": "add5000_008" },
+					{ "time": 0.2667, "name": "add5000_009" },
+					{ "time": 0.3, "name": "add5000_010" },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.3667, "name": "add5000_011" },
+					{ "time": 0.4, "name": "add5000_012" },
+					{ "time": 0.4333, "name": "add5000_013" },
+					{ "time": 0.4667, "name": "add5000_014" },
+					{ "time": 0.5, "name": "add5000_015" },
+					{ "time": 0.5333, "name": "add5000_016" },
+					{ "time": 0.5667, "name": "add5000_017" },
+					{ "time": 0.6, "name": "add5000_018" }
+				]
+			}
+		}
+	}
+}
+}

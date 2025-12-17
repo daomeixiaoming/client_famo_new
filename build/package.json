@@ -1,0 +1,13 @@
+{
+  "name": "h5-game-builder",
+  "version": "1.0.0",
+  "description": "H5游戏资源构建工具",
+  "scripts": {
+    "build": "node build-h5.js"
+  },
+  "dependencies": {
+    "archiver": "^5.3.1"
+  }
+}
+
+

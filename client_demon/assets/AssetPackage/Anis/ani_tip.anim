@@ -1,0 +1,67 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "ani_tip",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 15.041666666666666,
+  "sample": 24,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "y": [
+        {
+          "frame": 0,
+          "value": 50
+        },
+        {
+          "frame": 5,
+          "value": 0
+        },
+        {
+          "frame": 10,
+          "value": -50
+        },
+        {
+          "frame": 11.291666666666666,
+          "value": -50
+        },
+        {
+          "frame": 11.333333333333334,
+          "value": -50
+        },
+        {
+          "frame": 15.041666666666666,
+          "value": 50
+        }
+      ],
+      "opacity": [
+        {
+          "frame": 0,
+          "value": 255
+        },
+        {
+          "frame": 10.041666666666666,
+          "value": 255
+        },
+        {
+          "frame": 11.291666666666666,
+          "value": 0
+        },
+        {
+          "frame": 11.333333333333334,
+          "value": 0
+        },
+        {
+          "frame": 15,
+          "value": 0
+        },
+        {
+          "frame": 15.041666666666666,
+          "value": 255
+        }
+      ]
+    }
+  },
+  "events": []
+}

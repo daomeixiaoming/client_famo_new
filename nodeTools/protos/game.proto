@@ -1,0 +1,87 @@
+syntax = "proto3"; 
+
+package protoGame;
+
+message TestMsg {
+  string sendType = 1;
+  int32 sendNo = 2;
+}
+
+message HelloMsg {
+  string value = 1;
+}
+
+message RewardInfo {
+  // 用户昵称
+  string nickname = 1;
+  // 中次破魔卷数量
+  int32 reward = 2;
+}
+
+message BossStatus {
+  // 当前血量
+  int32 blood = 1;
+  // 最大血量
+  int32 maxBlood = 2;
+  // 剩余复活时间
+  int64 respawnTimer = 3;
+  // 复活时间戳
+  int64 respawnAt = 4;
+}
+
+// 获得宝箱消息
+message BoxInfo {
+  // 宝箱唯一id
+  int32 id = 1;
+  // 宝箱类型，1为钻石，2为黄金，3为白银
+  int32 boxType = 2;
+}
+
+
+enum RequestCode {
+  INVALID_REQUEST = 0;
+  PING = 1;
+  DEMO_REQUEST = 2;
+}
+
+enum ResponseCode {
+  INVALID_RESPONSE = 0;
+  PONG = 1;
+  DEMO_RESPONSE = 2;
+  // 伐魔中奖信息
+  DEMON_SLAYING_REWARD_INFO = 10;
+  // 伐魔boss状态更新
+  DEMON_SLAYING_BOSS_STATUS = 11;
+  // 伐魔boss宝箱获取通知
+  DEMON_SLAYING_BOX_REWARD = 12;
+}
+
+message RequestBody {
+  oneof body {
+    TestMsg demo = 1;
+  }
+}
+
+message Request {
+  RequestCode cmd = 1;
+  // 没有body的消息，可以不传body，但只要传了body，oneof 里的就必须设置一个
+  RequestBody body = 2;
+}
+
+message Response {
+  ResponseCode cmd = 1;
+  // 没有body的消息，可以不传body，但只要传了body，oneof 里的就必须设置一个
+  ResponseBody body = 2;
+}
+
+message ResponseBody {
+  oneof body {
+    HelloMsg demo = 1;
+    // 伐魔中奖信息
+    RewardInfo demonSlayingRewardInfo = 2;
+    // 伐魔boss状态更新
+    BossStatus demonSlayingBossStatus = 3;
+     // 伐魔获得宝箱通知
+    BoxInfo demonSlayingBoxReward = 4;
+  }
+}

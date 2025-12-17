@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "8ac56424-8799-4def-8163-a05a35d806b7",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 375,
+  "height": 500,
+  "platformSettings": {},
+  "subMetas": {
+    "home_bgGunag_1": {
+      "ver": "1.0.6",
+      "uuid": "dbb0226e-7870-4509-82b4-bceb9bf30bde",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "8ac56424-8799-4def-8163-a05a35d806b7",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -1.5,
+      "trimX": 0,
+      "trimY": 7,
+      "width": 375,
+      "height": 489,
+      "rawWidth": 375,
+      "rawHeight": 500,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

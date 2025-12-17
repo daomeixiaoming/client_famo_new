@@ -1,0 +1,118 @@
+
+sp_atk500.png
+size: 580,580
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+add500_001
+  rotate: true
+  xy: 222, 208
+  size: 169, 150
+  orig: 376, 380
+  offset: 85, 118
+  index: -1
+add500_002
+  rotate: true
+  xy: 222, 208
+  size: 169, 150
+  orig: 376, 380
+  offset: 85, 118
+  index: -1
+add500_003
+  rotate: false
+  xy: 2, 382
+  size: 233, 194
+  orig: 376, 380
+  offset: 81, 87
+  index: -1
+add500_004
+  rotate: false
+  xy: 2, 382
+  size: 233, 194
+  orig: 376, 380
+  offset: 81, 87
+  index: -1
+add500_005
+  rotate: false
+  xy: 2, 190
+  size: 218, 190
+  orig: 376, 380
+  offset: 100, 96
+  index: -1
+add500_006
+  rotate: false
+  xy: 2, 190
+  size: 218, 190
+  orig: 376, 380
+  offset: 100, 96
+  index: -1
+add500_007
+  rotate: false
+  xy: 237, 381
+  size: 216, 195
+  orig: 376, 380
+  offset: 100, 95
+  index: -1
+add500_008
+  rotate: false
+  xy: 237, 381
+  size: 216, 195
+  orig: 376, 380
+  offset: 100, 95
+  index: -1
+add500_009
+  rotate: false
+  xy: 2, 2
+  size: 180, 186
+  orig: 376, 380
+  offset: 111, 97
+  index: -1
+add500_010
+  rotate: false
+  xy: 2, 2
+  size: 180, 186
+  orig: 376, 380
+  offset: 111, 97
+  index: -1
+add500_011
+  rotate: false
+  xy: 184, 12
+  size: 166, 176
+  orig: 376, 380
+  offset: 113, 106
+  index: -1
+add500_012
+  rotate: false
+  xy: 184, 12
+  size: 166, 176
+  orig: 376, 380
+  offset: 113, 106
+  index: -1
+add500_013
+  rotate: true
+  xy: 352, 53
+  size: 153, 150
+  orig: 376, 380
+  offset: 124, 108
+  index: -1
+add500_014
+  rotate: true
+  xy: 374, 226
+  size: 153, 150
+  orig: 376, 380
+  offset: 124, 108
+  index: -1
+add500_015
+  rotate: false
+  xy: 222, 379
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+add500_000
+  rotate: false
+  xy: 222, 379
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

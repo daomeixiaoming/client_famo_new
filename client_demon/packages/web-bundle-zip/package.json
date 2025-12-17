@@ -1,0 +1,22 @@
+{
+  "name": "web-bundle-zip",
+  "version": "0.0.1",
+  "description": "WEB自动压缩bundle",
+  "author": "eycodes@gmail.com",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/WEB自动压缩bundle": {
+      "message": "web-bundle-zip:start"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "WEB自动压缩bundle",
+    "width": 400,
+    "height": 100
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  }
+}

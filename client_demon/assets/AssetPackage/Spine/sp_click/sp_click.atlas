@@ -1,0 +1,132 @@
+
+sp_click.png
+size: 764,764
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+addClick_000
+  rotate: true
+  xy: 74, 27
+  size: 55, 49
+  orig: 300, 300
+  offset: 124, 124
+  index: -1
+addClick_001
+  rotate: true
+  xy: 2, 5
+  size: 77, 70
+  orig: 300, 300
+  offset: 114, 115
+  index: -1
+addClick_002
+  rotate: false
+  xy: 228, 10
+  size: 98, 88
+  orig: 300, 300
+  offset: 104, 106
+  index: -1
+addClick_003
+  rotate: true
+  xy: 656, 195
+  size: 121, 106
+  orig: 300, 300
+  offset: 94, 96
+  index: -1
+addClick_004
+  rotate: true
+  xy: 632, 4
+  size: 144, 124
+  orig: 300, 300
+  offset: 83, 87
+  index: -1
+addClick_005
+  rotate: false
+  xy: 461, 2
+  size: 169, 146
+  orig: 300, 300
+  offset: 72, 76
+  index: -1
+addClick_006
+  rotate: false
+  xy: 461, 150
+  size: 193, 166
+  orig: 300, 300
+  offset: 61, 66
+  index: -1
+addClick_007
+  rotate: false
+  xy: 244, 345
+  size: 218, 184
+  orig: 300, 300
+  offset: 50, 59
+  index: -1
+addClick_008
+  rotate: false
+  xy: 2, 326
+  size: 240, 203
+  orig: 300, 300
+  offset: 40, 50
+  index: -1
+addClick_009
+  rotate: false
+  xy: 228, 100
+  size: 231, 224
+  orig: 300, 300
+  offset: 33, 39
+  index: -1
+addClick_010
+  rotate: true
+  xy: 2, 84
+  size: 232, 224
+  orig: 300, 300
+  offset: 33, 39
+  index: -1
+addClick_012
+  rotate: false
+  xy: 490, 535
+  size: 237, 227
+  orig: 300, 300
+  offset: 30, 38
+  index: -1
+addClick_013
+  rotate: false
+  xy: 2, 531
+  size: 242, 231
+  orig: 300, 300
+  offset: 28, 36
+  index: -1
+addClick_014
+  rotate: false
+  xy: 246, 531
+  size: 242, 231
+  orig: 300, 300
+  offset: 28, 36
+  index: -1
+addClick_015
+  rotate: false
+  xy: 490, 318
+  size: 247, 215
+  orig: 300, 300
+  offset: 25, 34
+  index: -1
+addClick_016
+  rotate: false
+  xy: 742, 761
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+addClick_018
+  rotate: false
+  xy: 742, 761
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+addClick_017
+  rotate: false
+  xy: 729, 752
+  size: 11, 10
+  orig: 300, 300
+  offset: 76, 221
+  index: -1
