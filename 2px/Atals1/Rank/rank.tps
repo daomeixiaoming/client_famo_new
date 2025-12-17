@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../../client_demon/assets/AssetPackage/Atals1/Rank.png</filename>
+        <filename>../../../client_famo_new/assets/AssetPackage/Atals1/Rank.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -76,7 +76,7 @@
             <key>sizeConstraints</key>
             <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
             <key>forceSquared</key>
-            <false/>
+            <true/>
             <key>forceWordAligned</key>
             <false/>
             <key>maxRects</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../../client_demon/assets/AssetPackage/Atals1/Rank.plist</filename>
+        <filename>../../../client_famo_new/assets/AssetPackage/Atals1/Rank.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
