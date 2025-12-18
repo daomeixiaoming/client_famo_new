@@ -40,7 +40,6 @@ export const ResPkg_Home2 = {
         ResCfg.Prefabs.Agree,
         ResCfg.Prefabs.Notice,
         ResCfg.Prefabs.Rank,
-        // ResCfg.Prefabs.RankDetial,
         ResCfg.Prefabs.RankItem1,
         ResCfg.Prefabs.RankItem2,
         ResCfg.Prefabs.RankPage1,

@@ -43,6 +43,13 @@ export const AtalsCfg = {
   Boss4: "Boss/boss4",
 };
 
+// 延迟加载的图集
+export const Atals1Cfg = {
+  HomeCom: "HomeCom",
+  End: "End",
+  Rank: "Rank",
+};
+
 // 散图
 export const GuiCfg = {
   login_bg: "login_bg",

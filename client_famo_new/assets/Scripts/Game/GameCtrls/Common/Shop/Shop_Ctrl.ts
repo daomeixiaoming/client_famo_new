@@ -34,34 +34,20 @@ export default class Shop_Ctrl extends UIBase {
     super.onLoad();
     this.initUI();
     this.updatePMQ();
-    EventMgr.Instance.AddEventListener(
-      EventKey.Update_ExorcismVoucher,
-      this,
-      this.updatePMQ
-    );
-    EventMgr.Instance.AddEventListener(
-      EventKey.Http_Res_GetShopList,
-      this,
-      this.onListDataRes
-    );
+    EventMgr.Instance.AddEventListener(EventKey.Update_ExorcismVoucher, this, this.updatePMQ);
+    EventMgr.Instance.AddEventListener(EventKey.Http_Res_GetShopList, this, this.onListDataRes);
   }
 
   protected onDestroy(): void {
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Update_ExorcismVoucher,
-      this,
-      this.updatePMQ
-    ); //更新破魔券
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_GetShopList,
-      this,
-      this.onListDataRes
-    );
+    EventMgr.Instance.RemoveListenner(EventKey.Update_ExorcismVoucher, this, this.updatePMQ); //更新破魔券
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_GetShopList, this, this.onListDataRes);
   }
 
-  async start() {
+  start() {
     this.initData();
     this.getListData();
+
+    this.RunAnimation("node/bg");
   }
 
   initData() {
@@ -72,15 +58,8 @@ export default class Shop_Ctrl extends UIBase {
     this.AddButtonListener("node/bg/btn_close", this, this.onCloseBtn);
     this.AddButtonListener("node/bg/item_bg/btn_add", this, this.onBtnAddClick);
 
-    this.labPMQ = this.ViewComponent(
-      "node/bg/item_bg/lab",
-      cc.Label
-    ) as cc.Label;
-
-    this.scrollview = this.ViewComponent(
-      "node/bg/shop_bg1/scrollView",
-      cc.ScrollView
-    ) as cc.ScrollView;
+    this.labPMQ = this.ViewComponent("node/bg/item_bg/lab", cc.Label) as cc.Label;
+    this.scrollview = this.ViewComponent("node/bg/shop_bg1/scrollView", cc.ScrollView) as cc.ScrollView;
     this.scrollview.node.on("scroll-to-bottom", this.onScrollToBottom, this);
   }
 
@@ -91,10 +70,7 @@ export default class Shop_Ctrl extends UIBase {
     NetHttpMgr.Instance.GetShopList(this.startPage, 9, des, 1);
   }
 
-  private onListDataRes(
-    uname: string,
-    udata: PageResponseGameMallProductResp
-  ): void {
+  private onListDataRes(uname: string, udata: PageResponseGameMallProductResp): void {
     DebugUtils.Log("==============Shop_Ctrl.onListDataRes============", udata);
     if (udata) {
       let list = udata.list;

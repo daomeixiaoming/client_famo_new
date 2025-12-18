@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "I+3L+a5XKGa2EzBSzIh4XssXQSE",
+	"hash": "N4xCup4DTNZM5Y0iwx5XNjVI5qE",
 	"spine": "3.8.75",
-	"x": -188,
-	"y": -190,
-	"width": 376,
-	"height": 380,
+	"x": -187,
+	"y": -200,
+	"width": 375,
+	"height": 400,
 	"images": "./res/",
 	"audio": ""
 },
@@ -13,29 +13,39 @@
 	{ "name": "root" }
 ],
 "slots": [
-	{ "name": "add500_000", "bone": "root", "attachment": "add500_015" }
+	{ "name": "击杀1_000", "bone": "root", "attachment": "击杀1_025" }
 ],
 "skins": [
 	{
 		"name": "default",
 		"attachments": {
-			"add500_000": {
-				"add500_000": { "width": 376, "height": 380 },
-				"add500_001": { "width": 376, "height": 380 },
-				"add500_002": { "width": 376, "height": 380 },
-				"add500_003": { "width": 376, "height": 380 },
-				"add500_004": { "width": 376, "height": 380 },
-				"add500_005": { "width": 376, "height": 380 },
-				"add500_006": { "width": 376, "height": 380 },
-				"add500_007": { "width": 376, "height": 380 },
-				"add500_008": { "width": 376, "height": 380 },
-				"add500_009": { "width": 376, "height": 380 },
-				"add500_010": { "width": 376, "height": 380 },
-				"add500_011": { "width": 376, "height": 380 },
-				"add500_012": { "width": 376, "height": 380 },
-				"add500_013": { "width": 376, "height": 380 },
-				"add500_014": { "width": 376, "height": 380 },
-				"add500_015": { "width": 376, "height": 380 }
+			"击杀1_000": {
+				"击杀1_000": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_001": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_002": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_003": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_004": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_005": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_006": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_007": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_008": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_009": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_010": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_011": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_012": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_013": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_014": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_015": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_016": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_017": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_018": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_019": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_020": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_021": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_022": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_023": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_024": { "x": 0.5, "width": 375, "height": 400 },
+				"击杀1_025": { "x": 0.5, "width": 375, "height": 400 }
 			}
 		}
 	}
@@ -46,36 +56,39 @@
 "animations": {
 	"animation": {
 		"slots": {
-			"add500_000": {
+			"击杀1_000": {
 				"attachment": [
-					{ "name": "add500_000" },
-					{ "time": 0.0333, "name": "add500_001" },
-					{ "time": 0.0667, "name": "add500_002" },
-					{ "time": 0.1, "name": "add500_003" },
-					{ "time": 0.1333, "name": "add500_004" },
-					{ "time": 0.1667, "name": "add500_005" },
-					{ "time": 0.2, "name": "add500_006" },
-					{ "time": 0.2333, "name": "add500_007" },
-					{ "time": 0.2667, "name": "add500_008" },
-					{ "time": 0.3, "name": "add500_009" },
-					{ "time": 0.3333, "name": "add500_010" },
-					{ "time": 0.3667, "name": "add500_011" },
-					{ "time": 0.4, "name": "add500_012" },
-					{ "time": 0.4333, "name": "add500_013" },
-					{ "time": 0.4667, "name": "add500_014" },
-					{ "time": 0.5, "name": "add500_015" }
-				]
-			}
-		},
-		"bones": {
-			"root": {
-				"scale": [
-					{ "x": 2, "y": 2 }
+					{ "name": null },
+					{ "time": 0.0333, "name": "击杀1_001" },
+					{ "time": 0.0667, "name": "击杀1_002" },
+					{ "time": 0.1, "name": "击杀1_003" },
+					{ "time": 0.1333, "name": "击杀1_004" },
+					{ "time": 0.1667, "name": "击杀1_005" },
+					{ "time": 0.2, "name": "击杀1_006" },
+					{ "time": 0.2333, "name": "击杀1_007" },
+					{ "time": 0.2667, "name": "击杀1_008" },
+					{ "time": 0.3, "name": "击杀1_009" },
+					{ "time": 0.3333, "name": "击杀1_010" },
+					{ "time": 0.3667, "name": "击杀1_011" },
+					{ "time": 0.4, "name": "击杀1_012" },
+					{ "time": 0.4333, "name": "击杀1_013" },
+					{ "time": 0.4667, "name": "击杀1_014" },
+					{ "time": 0.5, "name": "击杀1_015" },
+					{ "time": 0.5333, "name": "击杀1_016" },
+					{ "time": 0.5667, "name": "击杀1_017" },
+					{ "time": 0.6, "name": "击杀1_018" },
+					{ "time": 0.6333, "name": "击杀1_019" },
+					{ "time": 0.6667, "name": "击杀1_020" },
+					{ "time": 0.7, "name": "击杀1_021" },
+					{ "time": 0.7333, "name": "击杀1_022" },
+					{ "time": 0.7667, "name": "击杀1_023" },
+					{ "time": 0.8, "name": "击杀1_024" },
+					{ "time": 0.8333, "name": "击杀1_025" }
 				]
 			}
 		},
 		"events": [
-			{ "time": 0.5, "name": "atk_500" }
+			{ "time": 0.8667, "name": "atk_500" }
 		]
 	}
 }

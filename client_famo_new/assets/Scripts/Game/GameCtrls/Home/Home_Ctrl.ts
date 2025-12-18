@@ -1,28 +1,27 @@
 import EventMgr from "../../../Framework/Managers/EventMgr";
 import { NetMgr } from "../../../Framework/Managers/Net/NetMgr";
 import NodePoolMgr from "../../../Framework/Managers/NodePoolMgr";
-import { ResMgr } from "../../../Framework/Managers/ResMgr";
 import { ResMgrAsync } from "../../../Framework/Managers/ResMgrAsync";
 import SoundMgr from "../../../Framework/Managers/SoundMgr";
 import UIBase from "../../../Framework/Managers/UIBase";
 import UIMgr, { UILayer } from "../../../Framework/Managers/UIMgr";
 import CocosUtils from "../../../Framework/Utils/CocosUtils";
 import DebugUtils from "../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../Framework/Utils/GameUtils";
 import RandomUtils from "../../../Framework/Utils/RandomUtils";
 import TimeUtils from "../../../Framework/Utils/TimeUtils";
 import { protoGame } from "../../../Proto/game";
-import AniEvent, { AniType } from "../../Common/AniEvent";
 import { EventKey } from "../../Config/EventCfg";
-import { AbNames, AtalsCfg, Lngs, NetCfg, UICfg } from "../../Config/GameConfig";
+import { AbNames, Atals1Cfg, Lngs, NetCfg } from "../../Config/GameConfig";
 import { AtkType, AttackInfo, AttackResponse, BoxInfo, BoxType, HomeResponse, OpenBoxResponse, } from "../../Config/MsgCfg";
 import { ResCfg, SpineCfg } from "../../Config/ResConfig";
 import GameApp from "../../GameApp";
 import GameLogic from "../../GameLogic";
-import UIView from "../../UIView";
 import EndGetBox2_Ctrl from "./End/EndGetBox2_Ctrl";
 import EndGetBox_Ctrl from "./End/EndGetBox_Ctrl";
 import EndOpen_Ctrl from "./End/EndOpen_Ctrl";
 import Help_Ctrl from "./Help/Help_Ctrl";
+import HomeMenu_Ctrl from "./HomeMenu_Ctrl";
 import Rank_Ctrl from "./Rank/Rank_Ctrl";
 
 const { ccclass, property } = cc._decorator;
@@ -47,7 +46,6 @@ export default class Home_Ctrl extends UIBase {
   boss: cc.Node;
   lab_hp: cc.Label;
   sp_voice: cc.Sprite;
-  atals_home: cc.SpriteAtlas;
   isClickVoice: boolean = true;
   lb_pms: cc.Label;
 
@@ -111,10 +109,7 @@ export default class Home_Ctrl extends UIBase {
     this.UnRegisterEvent();
 
     // 清理节点池
-    NodePoolMgr.Instance.ClearAllNodeInPool(
-      AbNames.Prefabs,
-      ResCfg.Prefabs.addBetItem
-    );
+    NodePoolMgr.Instance.ClearAllNodeInPool(AbNames.Prefabs, ResCfg.Prefabs.addBetItem);
 
     this.clearFHCallBack();
   }
@@ -285,11 +280,7 @@ export default class Home_Ctrl extends UIBase {
   private initData(): void {
     DebugUtils.Log("===================Home_Ctrl.initData====================");
     //加载节点池
-    NodePoolMgr.Instance.AddNodePool(
-      AbNames.Prefabs,
-      ResCfg.Prefabs.addBetItem,
-      20
-    );
+    NodePoolMgr.Instance.AddNodePool(AbNames.Prefabs, ResCfg.Prefabs.addBetItem, 20);
 
     this.setBoxStatus(BoxType.Box_BY, 0);
     this.setBoxStatus(BoxType.Box_HJ, 0);
@@ -301,13 +292,6 @@ export default class Home_Ctrl extends UIBase {
     this.status_fh.active = false;
     // this.boss.active = false;
     this.setHpStatus();
-
-    //home 图集
-    this.atals_home = ResMgr.Instance.getAsset(
-      AbNames.Atals_Home,
-      AtalsCfg.Home,
-      cc.SpriteAtlas
-    ) as cc.SpriteAtlas;
 
     //初始化声音
     this.setBtnViceSp();
@@ -496,10 +480,7 @@ export default class Home_Ctrl extends UIBase {
     // DebugUtils.Log("==========setBtnViceSp设置声音按钮的图片状态==============", value);
     let v = parseInt(value);
     let path = v === 1 ? "home_voice_close" : "home_voice_open";
-    let sf = this.atals_home.getSpriteFrame(path);
-    if (sf) {
-      this.sp_voice.spriteFrame = sf;
-    }
+    GameUtils.SetSpData(AbNames.Atals1, Atals1Cfg.HomeCom, path, this.sp_voice);
   }
 
   /**
@@ -608,10 +589,7 @@ export default class Home_Ctrl extends UIBase {
     // reward = 50; //测试
     if (reward > 0) {
       let temp = this.addBetArea;
-      let pre2 = NodePoolMgr.Instance.GetNodeInPool(
-        AbNames.Prefabs,
-        ResCfg.Prefabs.addBetItem
-      );
+      let pre2 = NodePoolMgr.Instance.GetNodeInPool(AbNames.Prefabs, ResCfg.Prefabs.addBetItem);
       let item2 = cc.instantiate(pre2);
       if (item2) {
         temp.addChild(item2);
@@ -644,44 +622,30 @@ export default class Home_Ctrl extends UIBase {
 
   // 点击返回
   private onBtnBackClick(): void {
-    EventMgr.Instance.Emit(EventKey.UI_GotoLogin, "");
+    GameApp.Instance.onExitGame();
   }
 
   // 排行榜
-  private async onBtnRankClick(button: cc.Button) {
+  private onBtnRankClick(button: cc.Button) {
     this.updateBtnsStatus(false);
-    // await GameApp.Instance.isLoadRankAb();
     let parent = UIMgr.Instance.GetParent(UILayer.UI_Layer2);
-    (await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.Rank,
-      AbNames.Prefabs,
-      parent
-    )) as Rank_Ctrl;
+    UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.Rank, AbNames.Prefabs, parent);
   }
 
   // 中奖记录
-  private async onBtnRecordClick(button: cc.Button) {
+  private onBtnRecordClick(button: cc.Button) {
     this.updateBtnsStatus(false);
     let parent = UIMgr.Instance.GetParent(UILayer.UI_Layer2);
-    await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.Record,
-      AbNames.Prefabs,
-      parent
-    );
+    UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.Record, AbNames.Prefabs, parent);
   }
 
   // 活动说明
-  private async onBtnHelpClick(button: cc.Button) {
+  private onBtnHelpClick(button: cc.Button) {
     this.updateBtnsStatus(false);
-    // 请求概率数据
-    await GameLogic.Instance.getGames();
+
     // 请求配置数据
     let parent = UIMgr.Instance.GetParent(UILayer.UI_Layer2);
-    (await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.Help,
-      AbNames.Prefabs,
-      parent
-    )) as Help_Ctrl;
+    UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.HomeMenu, AbNames.Prefabs, parent);
   }
 
   // 点击500攻击

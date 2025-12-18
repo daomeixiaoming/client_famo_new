@@ -1,969 +1,426 @@
 
 sp_boss.png
-size: 2048,2048
+size: 1988,1988
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-res/BOSS_000
+res/虎叫_000
   rotate: false
-  xy: 2, 1063
-  size: 312, 263
-  orig: 375, 330
-  offset: 23, 57
+  xy: 2, 25
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
   index: -1
-res/BOSS_001
+res/虎叫_001
   rotate: false
-  xy: 316, 1063
-  size: 311, 263
-  orig: 375, 330
-  offset: 23, 57
+  xy: 703, 1251
+  size: 330, 361
+  orig: 373, 423
+  offset: 23, 37
   index: -1
-res/BOSS_002
+res/虎叫_002
   rotate: false
-  xy: 629, 1063
-  size: 311, 263
-  orig: 375, 330
-  offset: 23, 57
+  xy: 703, 1614
+  size: 339, 372
+  orig: 373, 423
+  offset: 20, 30
   index: -1
-res/BOSS_003
-  rotate: false
-  xy: 942, 1063
-  size: 311, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_004
-  rotate: false
-  xy: 1255, 1063
-  size: 311, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_005
-  rotate: false
-  xy: 1568, 1063
-  size: 312, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_006
-  rotate: false
-  xy: 627, 1592
-  size: 312, 262
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_007
-  rotate: false
-  xy: 2, 798
-  size: 312, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_008
-  rotate: false
-  xy: 316, 798
-  size: 313, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_009
-  rotate: false
-  xy: 631, 798
-  size: 313, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_010
-  rotate: false
-  xy: 946, 798
-  size: 312, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_011
-  rotate: false
-  xy: 1260, 798
-  size: 312, 263
-  orig: 375, 330
-  offset: 24, 56
-  index: -1
-res/BOSS_012
-  rotate: false
-  xy: 1574, 798
-  size: 312, 263
-  orig: 375, 330
-  offset: 24, 56
-  index: -1
-res/BOSS_013
-  rotate: false
-  xy: 1599, 2
-  size: 313, 264
-  orig: 375, 330
-  offset: 24, 56
-  index: -1
-res/BOSS_014
-  rotate: false
-  xy: 2, 533
-  size: 313, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_015
-  rotate: false
-  xy: 317, 533
-  size: 313, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_016
-  rotate: false
-  xy: 941, 1592
-  size: 312, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_017
-  rotate: false
-  xy: 1255, 1592
-  size: 312, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_018
-  rotate: false
-  xy: 1569, 1592
-  size: 313, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_019
-  rotate: false
-  xy: 310, 1328
-  size: 313, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_020
-  rotate: false
-  xy: 625, 1328
-  size: 315, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_021
-  rotate: false
-  xy: 942, 1328
-  size: 315, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_022
-  rotate: false
-  xy: 1259, 1328
-  size: 315, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_023
-  rotate: false
-  xy: 1576, 1328
-  size: 315, 262
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_024
-  rotate: false
-  xy: 632, 533
-  size: 315, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_025
-  rotate: false
-  xy: 949, 533
-  size: 314, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_026
-  rotate: false
-  xy: 1265, 533
-  size: 314, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_027
-  rotate: false
-  xy: 1581, 533
-  size: 314, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_028
-  rotate: false
-  xy: 2, 268
-  size: 313, 263
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_029
-  rotate: false
-  xy: 317, 268
-  size: 312, 263
-  orig: 375, 330
-  offset: 25, 57
-  index: -1
-res/BOSS_030
-  rotate: false
-  xy: 631, 268
-  size: 311, 263
-  orig: 375, 330
-  offset: 25, 57
-  index: -1
-res/BOSS_031
-  rotate: false
-  xy: 944, 268
-  size: 310, 263
-  orig: 375, 330
-  offset: 25, 57
-  index: -1
-res/BOSS_032
-  rotate: false
-  xy: 1256, 268
-  size: 309, 263
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_033
-  rotate: false
-  xy: 1567, 268
-  size: 308, 263
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_034
-  rotate: false
-  xy: 2, 1329
-  size: 306, 262
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_035
-  rotate: false
-  xy: 2, 3
-  size: 307, 263
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_038
-  rotate: false
-  xy: 311, 3
-  size: 308, 263
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_039
-  rotate: false
-  xy: 621, 3
-  size: 308, 263
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_087
-  rotate: false
-  xy: 931, 3
-  size: 332, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_088
-  rotate: false
-  xy: 1265, 3
-  size: 332, 263
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_133
-  rotate: false
-  xy: 2, 1593
-  size: 310, 261
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_134
-  rotate: false
-  xy: 314, 1592
-  size: 311, 262
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-
-sp_boss2.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-res/BOSS_036
-  rotate: false
-  xy: 2, 1619
-  size: 307, 264
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_037
-  rotate: false
-  xy: 938, 1618
-  size: 307, 265
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_040
-  rotate: false
-  xy: 311, 1619
-  size: 308, 264
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_041
-  rotate: false
-  xy: 1247, 1618
-  size: 309, 265
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_042
-  rotate: false
-  xy: 1558, 1618
-  size: 310, 265
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_043
-  rotate: false
-  xy: 971, 1350
-  size: 310, 266
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_044
-  rotate: false
-  xy: 334, 1082
-  size: 311, 267
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_045
-  rotate: false
-  xy: 647, 1082
-  size: 311, 267
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_046
-  rotate: false
-  xy: 965, 542
-  size: 311, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_047
-  rotate: false
-  xy: 1278, 542
-  size: 311, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_048
-  rotate: false
-  xy: 1591, 542
-  size: 312, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_049
-  rotate: false
-  xy: 2, 276
-  size: 312, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_050
-  rotate: false
-  xy: 316, 274
-  size: 312, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_051
-  rotate: false
-  xy: 630, 273
-  size: 312, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_052
-  rotate: false
-  xy: 944, 272
-  size: 312, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_053
-  rotate: false
-  xy: 1258, 272
-  size: 312, 268
-  orig: 375, 330
-  offset: 28, 57
-  index: -1
-res/BOSS_054
-  rotate: false
-  xy: 1572, 272
-  size: 314, 268
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_055
-  rotate: false
-  xy: 628, 3
-  size: 314, 268
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_056
-  rotate: false
-  xy: 944, 2
-  size: 315, 268
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_057
-  rotate: false
-  xy: 621, 1619
-  size: 315, 264
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_058
-  rotate: false
-  xy: 2, 1352
-  size: 316, 265
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_059
-  rotate: false
-  xy: 320, 1352
-  size: 316, 265
-  orig: 375, 330
-  offset: 27, 57
-  index: -1
-res/BOSS_060
-  rotate: false
-  xy: 1283, 1350
-  size: 318, 266
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_061
-  rotate: false
-  xy: 960, 1081
-  size: 318, 267
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_062
-  rotate: false
-  xy: 1261, 2
-  size: 318, 268
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_063
-  rotate: false
-  xy: 1581, 2
-  size: 318, 268
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_079
-  rotate: false
-  xy: 1280, 1081
-  size: 329, 267
-  orig: 375, 330
-  offset: 25, 57
-  index: -1
-res/BOSS_080
-  rotate: false
-  xy: 1611, 1081
-  size: 329, 267
-  orig: 375, 330
-  offset: 25, 57
-  index: -1
-res/BOSS_081
-  rotate: false
-  xy: 334, 813
-  size: 331, 267
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_082
-  rotate: false
-  xy: 667, 812
-  size: 331, 267
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_083
-  rotate: false
-  xy: 1603, 1350
-  size: 331, 266
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_084
-  rotate: false
-  xy: 1000, 812
-  size: 331, 267
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_085
-  rotate: false
-  xy: 1333, 812
-  size: 331, 267
-  orig: 375, 330
-  offset: 24, 57
-  index: -1
-res/BOSS_086
-  rotate: false
-  xy: 1666, 812
-  size: 332, 267
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_089
-  rotate: false
-  xy: 638, 1351
-  size: 331, 265
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_090
-  rotate: false
-  xy: 2, 1084
-  size: 330, 266
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_091
-  rotate: false
-  xy: 2, 815
-  size: 330, 267
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_110
-  rotate: false
-  xy: 2, 546
-  size: 319, 267
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_111
-  rotate: false
-  xy: 323, 544
-  size: 319, 267
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_112
-  rotate: false
-  xy: 644, 543
-  size: 319, 267
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_119
-  rotate: false
-  xy: 2, 6
-  size: 312, 268
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-res/BOSS_120
-  rotate: false
-  xy: 316, 4
-  size: 310, 268
-  orig: 375, 330
-  offset: 23, 57
-  index: -1
-
-sp_boss3.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-res/BOSS_064
-  rotate: false
-  xy: 981, 812
-  size: 319, 268
-  orig: 375, 330
-  offset: 26, 57
-  index: -1
-res/BOSS_065
-  rotate: false
-  xy: 1309, 1082
-  size: 319, 268
-  orig: 375, 330
-  offset: 26, 57
+res/虎叫_003
+  rotate: true
+  xy: 1396, 1644
+  size: 342, 380
+  orig: 373, 423
+  offset: 20, 25
   index: -1
-res/BOSS_066
+res/虎叫_004
   rotate: false
-  xy: 1639, 1352
-  size: 319, 268
-  orig: 375, 330
-  offset: 26, 57
+  xy: 1050, 41
+  size: 344, 385
+  orig: 373, 423
+  offset: 19, 21
   index: -1
-res/BOSS_067
+res/虎叫_005
   rotate: false
-  xy: 324, 2
-  size: 319, 268
-  orig: 375, 330
-  offset: 26, 57
+  xy: 702, 815
+  size: 345, 387
+  orig: 373, 423
+  offset: 19, 20
   index: -1
-res/BOSS_068
+res/虎叫_006
   rotate: false
-  xy: 1644, 1622
-  size: 320, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 352, 28
+  size: 347, 390
+  orig: 373, 423
+  offset: 19, 18
   index: -1
-res/BOSS_069
+res/虎叫_007
   rotate: false
-  xy: 649, 272
-  size: 319, 268
-  orig: 375, 330
-  offset: 26, 57
+  xy: 353, 812
+  size: 347, 390
+  orig: 373, 423
+  offset: 19, 18
   index: -1
-res/BOSS_070
+res/虎叫_008
   rotate: false
-  xy: 2, 2
-  size: 320, 268
-  orig: 375, 330
-  offset: 26, 57
+  xy: 353, 420
+  size: 347, 390
+  orig: 373, 423
+  offset: 19, 18
   index: -1
-res/BOSS_071
+res/虎叫_009
   rotate: false
-  xy: 329, 542
-  size: 322, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 701, 28
+  size: 347, 390
+  orig: 373, 423
+  offset: 19, 18
   index: -1
-res/BOSS_072
+res/虎叫_010
   rotate: false
-  xy: 1319, 1622
-  size: 323, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 354, 1596
+  size: 347, 390
+  orig: 373, 423
+  offset: 19, 18
   index: -1
-res/BOSS_073
+res/虎叫_011
   rotate: false
-  xy: 660, 1082
-  size: 324, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 354, 1204
+  size: 347, 390
+  orig: 373, 423
+  offset: 19, 18
   index: -1
-res/BOSS_074
+res/虎叫_012
   rotate: false
-  xy: 992, 1622
-  size: 325, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 2, 28
+  size: 348, 390
+  orig: 373, 423
+  offset: 18, 18
   index: -1
-res/BOSS_075
+res/虎叫_013
   rotate: false
   xy: 2, 812
-  size: 326, 268
-  orig: 375, 330
-  offset: 25, 57
+  size: 349, 390
+  orig: 373, 423
+  offset: 17, 18
   index: -1
-res/BOSS_076
+res/虎叫_014
   rotate: false
-  xy: 332, 1082
-  size: 326, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 2, 420
+  size: 349, 390
+  orig: 373, 423
+  offset: 17, 18
   index: -1
-res/BOSS_077
+res/虎叫_015
   rotate: false
-  xy: 2, 1352
-  size: 328, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 2, 1596
+  size: 350, 390
+  orig: 373, 423
+  offset: 16, 18
   index: -1
-res/BOSS_078
+res/虎叫_016
   rotate: false
-  xy: 333, 1622
-  size: 328, 268
-  orig: 375, 330
-  offset: 25, 57
+  xy: 2, 1204
+  size: 350, 390
+  orig: 373, 423
+  offset: 16, 18
   index: -1
-res/BOSS_092
+res/虎叫_017
   rotate: false
-  xy: 2, 1622
-  size: 329, 268
-  orig: 375, 330
-  offset: 23, 57
+  xy: 702, 428
+  size: 347, 385
+  orig: 373, 423
+  offset: 16, 21
   index: -1
-res/BOSS_093
+res/虎叫_018
   rotate: false
-  xy: 2, 1082
-  size: 328, 268
-  orig: 375, 330
-  offset: 23, 57
+  xy: 1051, 1612
+  size: 343, 374
+  orig: 373, 423
+  offset: 16, 30
   index: -1
-res/BOSS_094
-  rotate: false
-  xy: 332, 1352
-  size: 328, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_019
+  rotate: true
+  xy: 1364, 627
+  size: 323, 314
+  orig: 373, 423
+  offset: 16, 90
   index: -1
-res/BOSS_095
+res/虎叫_020
   rotate: false
-  xy: 663, 1622
-  size: 327, 268
-  orig: 375, 330
-  offset: 23, 57
+  xy: 1396, 311
+  size: 323, 314
+  orig: 373, 423
+  offset: 16, 90
   index: -1
-res/BOSS_096
-  rotate: false
-  xy: 662, 1352
-  size: 326, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_021
+  rotate: true
+  xy: 1666, 1007
+  size: 324, 314
+  orig: 373, 423
+  offset: 15, 90
   index: -1
-res/BOSS_097
-  rotate: false
-  xy: 2, 542
-  size: 325, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_022
+  rotate: true
+  xy: 1049, 952
+  size: 327, 314
+  orig: 373, 423
+  offset: 12, 90
   index: -1
-res/BOSS_098
-  rotate: false
-  xy: 330, 812
-  size: 325, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_023
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_099
-  rotate: false
-  xy: 990, 1352
-  size: 324, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_024
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_100
-  rotate: false
-  xy: 2, 272
-  size: 323, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_025
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_101
-  rotate: false
-  xy: 657, 812
-  size: 322, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_026
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_102
-  rotate: false
-  xy: 986, 1082
-  size: 321, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_027
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_103
-  rotate: false
-  xy: 1316, 1352
-  size: 321, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_028
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_104
-  rotate: false
-  xy: 327, 272
-  size: 320, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_029
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_105
-  rotate: false
-  xy: 653, 542
-  size: 320, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_030
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_106
-  rotate: false
-  xy: 975, 542
-  size: 319, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_031
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_107
-  rotate: false
-  xy: 1302, 812
-  size: 319, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_032
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_108
-  rotate: false
-  xy: 1630, 1082
-  size: 319, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_033
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_109
-  rotate: false
-  xy: 645, 2
-  size: 319, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_034
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_113
-  rotate: false
-  xy: 970, 272
-  size: 318, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_035
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_114
-  rotate: false
-  xy: 1296, 542
-  size: 318, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_036
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_115
-  rotate: false
-  xy: 1623, 812
-  size: 317, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_037
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_116
-  rotate: false
-  xy: 966, 2
-  size: 316, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_038
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_117
-  rotate: false
-  xy: 1290, 272
-  size: 315, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_039
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_118
-  rotate: false
-  xy: 1616, 542
-  size: 313, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_040
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_121
-  rotate: false
-  xy: 1607, 272
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_041
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_122
-  rotate: false
-  xy: 1596, 2
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_042
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_132
-  rotate: false
-  xy: 1284, 2
-  size: 310, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_043
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-
-sp_boss4.png
-size: 1024,1024
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-res/BOSS_123
-  rotate: false
-  xy: 2, 542
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_044
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_124
-  rotate: false
-  xy: 2, 272
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_045
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_125
-  rotate: false
-  xy: 313, 542
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_046
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_126
-  rotate: false
-  xy: 2, 2
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_047
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_127
-  rotate: false
-  xy: 313, 272
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_048
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_128
-  rotate: false
-  xy: 624, 542
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_049
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_129
-  rotate: false
-  xy: 313, 2
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_050
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_130
-  rotate: false
-  xy: 624, 272
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+res/虎叫_051
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
   index: -1
-res/BOSS_131
+res/虎叫_052
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
+  index: -1
+res/虎叫_053
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
+  index: -1
+res/虎叫_054
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
+  index: -1
+res/虎叫_055
+  rotate: true
+  xy: 1035, 1281
+  size: 329, 314
+  orig: 373, 423
+  offset: 10, 90
+  index: -1
+res/虎叫_056
+  rotate: true
+  xy: 1351, 1283
+  size: 327, 313
+  orig: 373, 423
+  offset: 12, 90
+  index: -1
+res/虎叫_057
+  rotate: true
+  xy: 1051, 626
+  size: 324, 311
+  orig: 373, 423
+  offset: 14, 91
+  index: -1
+res/虎叫_058
   rotate: false
-  xy: 624, 2
-  size: 309, 268
-  orig: 375, 330
-  offset: 23, 57
+  xy: 1666, 1333
+  size: 320, 309
+  orig: 373, 423
+  offset: 17, 92
+  index: -1
+res/虎叫_059
+  rotate: true
+  xy: 1680, 693
+  size: 312, 304
+  orig: 373, 423
+  offset: 18, 95
   index: -1

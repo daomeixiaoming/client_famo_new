@@ -1,8 +1,10 @@
 import { ResMgr } from "../../../../Framework/Managers/ResMgr";
+import { ResMgrAsync } from "../../../../Framework/Managers/ResMgrAsync";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import CocosUtils from "../../../../Framework/Utils/CocosUtils";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
-import { AbNames, AtalsCfg } from "../../../Config/GameConfig";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
+import { AbNames, Atals1Cfg, AtalsCfg } from "../../../Config/GameConfig";
 import { RankItem, UserLabelResponse } from "../../../Config/MsgCfg";
 import GameLogic from "../../../GameLogic";
 
@@ -17,7 +19,6 @@ export default class RankItem1_Ctrl extends UIBase {
   lab_lv: cc.Label;
   lab_name: cc.Label;
   lab_score: cc.Label; //伤害值
-  atals_home: cc.SpriteAtlas;
   sp_bg: cc.Sprite;
   spItem: cc.Node;
   scrollView: cc.ScrollView;
@@ -50,12 +51,6 @@ export default class RankItem1_Ctrl extends UIBase {
       "layout/scrollView",
       cc.ScrollView
     ) as cc.ScrollView;
-
-    this.atals_home = ResMgr.Instance.getAsset(
-      AbNames.Atals_Home,
-      AtalsCfg.Home,
-      cc.SpriteAtlas
-    ) as cc.SpriteAtlas;
   }
 
   public setData(data: RankItem, pos: number): void {
@@ -71,32 +66,24 @@ export default class RankItem1_Ctrl extends UIBase {
 
     this.lab_lv.string = rank.toString();
     let path = `rank_lv${pos + 1}`;
-    // DebugUtils.Log("==========setData11112============", path);
-    let sf = this.atals_home.getSpriteFrame(path);
-    if (sf) {
-      this.sp_lv.spriteFrame = sf;
-    }
+    GameUtils.SetSpData(AbNames.Atals1, Atals1Cfg.Rank, path, this.sp_lv);
 
     let name = data.nickname;
     this.lab_name.string = name;
     this.lab_score.string = this.formatNum(data.value, 1);
 
     let arr = ["rank_itembg0", "rank_itembg1", "rank_itembg2"];
-    path = "home_com_item_bg";
+    path = "rank_itembg_other";
     if (pos < 3) {
       path = arr[pos];
     } else {
       // 自己
       let myUid = GameLogic.Instance.userId;
       if (myUid === data.userId) {
-        path = "home_com_item_bg2";
+        path = "rank_itembg_my";
       }
     }
-
-    sf = this.atals_home.getSpriteFrame(path);
-    if (sf) {
-      this.sp_bg.spriteFrame = sf;
-    }
+    GameUtils.SetSpData(AbNames.Atals1, Atals1Cfg.Rank, path, this.sp_bg);
 
     let list: UserLabelResponse[] = data.userLabelList;
 

@@ -7,7 +7,6 @@ import UIMgr, { UILayer } from "../Framework/Managers/UIMgr";
 import DebugUtils from "../Framework/Utils/DebugUtils";
 import TimeUtils from "../Framework/Utils/TimeUtils";
 import { protoGame } from "../Proto/game";
-import AniEvent, { AniType } from "./Common/AniEvent";
 import TestMgr from "./Common/TestMgr";
 import { EventKey } from "./Config/EventCfg";
 import { AbNames, GameConfig, UICfg } from "./Config/GameConfig";
@@ -60,7 +59,6 @@ export default class GameApp extends cc.Component {
     //点击动销的节点
     this.clickAni = this.node.getChildByName("Mask").getChildByName("temp");
     this.clickAni.active = true;
-    // this.clickAni.destroyAllChildren();
 
     // 添加模块
     // 添加解释数据的类
@@ -75,10 +73,6 @@ export default class GameApp extends cc.Component {
     NativeMgr.Instance.getLiveRoomInfo();
     NativeMgr.Instance.getAppInfo();
     NativeMgr.Instance.getUserInfo();
-
-    // DebugUtils.Log("========GameApp.Init3==========");
-    // 背景图
-    // this.sp_bg = cc.find("Canvas/bg").getComponent(cc.Sprite) as cc.Sprite;
   }
 
   protected onDestroy(): void {
@@ -91,65 +85,21 @@ export default class GameApp extends cc.Component {
     EventMgr.Instance.AddEventListener(EventKey.Native_AppInfo, this, this.onNativeAppInfo);
     EventMgr.Instance.AddEventListener(EventKey.Native_UserInfo, this, this.onNativeUserInfo);
     EventMgr.Instance.AddEventListener(EventKey.Http_Res_GetPlayerInfo, this, this.onGetPlayerInfoRes); //用户数据返回
-    EventMgr.Instance.AddEventListener(EventKey.UI_ShowShop, this, this.onUIEventShowShop);
     EventMgr.Instance.AddEventListener(EventKey.UI_ShowShopMoney, this, this.onUIEventShowMoneyShop);
     EventMgr.Instance.AddEventListener(EventKey.UI_EnterGame, this, this.onUIEventEnterHome); //进入大厅 返回
-    EventMgr.Instance.AddEventListener(EventKey.UI_GotoLogin, this, this.onUIEventGotoLogin);
     EventMgr.Instance.AddEventListener(EventKey.UI_ClickAni, this, this.onUIEventClickAni);
     EventMgr.Instance.AddEventListener(EventKey.WS_RewardBox, this, this.onWSRewardBox);
   }
 
   private UnRegisterEvent() {
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Native_GetLiveInfo,
-      this,
-      this.onNativeLiveInfo
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Native_AppInfo,
-      this,
-      this.onNativeAppInfo
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Native_UserInfo,
-      this,
-      this.onNativeUserInfo
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_GetPlayerInfo,
-      this,
-      this.onGetPlayerInfoRes
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_ShowShop,
-      this,
-      this.onUIEventShowShop
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_ShowShopMoney,
-      this,
-      this.onUIEventShowMoneyShop
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_EnterGame,
-      this,
-      this.onUIEventEnterHome
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_GotoLogin,
-      this,
-      this.onUIEventGotoLogin
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_ClickAni,
-      this,
-      this.onUIEventClickAni
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.WS_RewardBox,
-      this,
-      this.onWSRewardBox
-    );
+    EventMgr.Instance.RemoveListenner(EventKey.Native_GetLiveInfo, this, this.onNativeLiveInfo);
+    EventMgr.Instance.RemoveListenner(EventKey.Native_AppInfo, this, this.onNativeAppInfo);
+    EventMgr.Instance.RemoveListenner(EventKey.Native_UserInfo, this, this.onNativeUserInfo);
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_GetPlayerInfo, this, this.onGetPlayerInfoRes); //用户数据返回
+    EventMgr.Instance.RemoveListenner(EventKey.UI_ShowShopMoney, this, this.onUIEventShowMoneyShop);
+    EventMgr.Instance.RemoveListenner(EventKey.UI_EnterGame, this, this.onUIEventEnterHome); //进入大厅 返回
+    EventMgr.Instance.RemoveListenner(EventKey.UI_ClickAni, this, this.onUIEventClickAni);
+    EventMgr.Instance.RemoveListenner(EventKey.WS_RewardBox, this, this.onWSRewardBox);
   }
 
   // 返回应用层
@@ -199,11 +149,7 @@ export default class GameApp extends cc.Component {
   // 加载登录模块的资源
   private LoadLoginModel(endCall?: Function): void {
     // DebugUtils.Log("============加载登录模块 start=============");
-    let pre = ResMgr.Instance.getAsset(
-      AbNames.Prefab_Login,
-      UICfg.Login,
-      cc.Prefab
-    );
+    let pre = ResMgr.Instance.getAsset(AbNames.Prefab_Login, UICfg.Login, cc.Prefab);
     if (pre) {
       DebugUtils.Log("============加载登录模块 end1=============");
       this.EnterLoadingScene();
@@ -211,8 +157,7 @@ export default class GameApp extends cc.Component {
       endCall && endCall();
       return;
     }
-    ResMgr.Instance.preloadResPkg(
-      ResPkg_Login,
+    ResMgr.Instance.preloadResPkg(ResPkg_Login,
       (now: any, total: any) => {
         // DebugUtils.Log(now, total);
       },
@@ -232,10 +177,7 @@ export default class GameApp extends cc.Component {
     UIMgr.Instance.ShowUIView(UICfg.Login, AbNames.Prefab_Login);
 
     let time = new Date().getTime() - this.timeStart;
-    DebugUtils.Log(
-      "=========GameApp加载完显示Login,耗时（ms）============",
-      time
-    );
+    DebugUtils.Log("=========GameApp加载完显示Login,耗时（ms）============", time);
 
     // 加载通知模块
     GameLogic.Instance.loadNoticePkg();
@@ -246,11 +188,7 @@ export default class GameApp extends cc.Component {
    * @param audioPath
    */
   public async playEffectAudio(audioPath: string) {
-    let audioClip = (await ResMgrAsync.Instance.IE_GetAsset(
-      AbNames.Sounds,
-      audioPath,
-      cc.AudioClip
-    )) as cc.AudioClip;
+    let audioClip = (await ResMgrAsync.Instance.IE_GetAsset(AbNames.Sounds, audioPath, cc.AudioClip)) as cc.AudioClip;
     if (audioClip) {
       SoundMgr.Instance.playSound(audioClip);
     }
@@ -270,24 +208,10 @@ export default class GameApp extends cc.Component {
     return res;
   }
 
-  // 显示法魔兑换商城
-  private async onUIEventShowShop(uname: string, udata: any) {
-    let parent = UIMgr.Instance.GetParent(UILayer.UI_Layer2);
-    await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.Shop,
-      AbNames.Prefabs,
-      parent
-    );
-  }
-
   // 显示伏魔券商城
   private async onUIEventShowMoneyShop(uname: string, udata: any) {
     let parent = UIMgr.Instance.GetParent(UILayer.UI_Layer2);
-    await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.ShopMoney,
-      AbNames.Prefabs,
-      parent
-    );
+    UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.ShopMoney, AbNames.Prefabs, parent);
   }
 
   // 显示加载资源界面
@@ -316,27 +240,6 @@ export default class GameApp extends cc.Component {
         });
       }
     );
-  }
-
-  // 主场景home 返回登录
-  private onUIEventGotoLogin(uname: string, udata: any): void {
-    DebugUtils.Log(
-      "=================GameApp.onUIEventGotoLogin=================="
-    );
-    this.timeStart = new Date().getTime();
-    // this.LoadLoginModel(() => {
-    //     DebugUtils.Log("=================GameApp.onUIEventGotoLogin111==================");
-    //     // 关闭大厅
-    //     UIMgr.Instance.DestroyView(UICfg.Home);
-    // });
-    // 关闭大厅
-    UIMgr.Instance.DestroyView(UICfg.Home);
-    // 显示大厅
-    UIMgr.Instance.ShowUIView(UICfg.Login, AbNames.Prefab_Login).setMaskActive(
-      false
-    );
-    // 播放背景音乐
-    GameLogic.Instance.playBgMusic();
   }
 
   //触摸动销

@@ -35,19 +35,11 @@ export default class RankPage1_Ctrl extends UIBase {
   }
 
   private registertEvent() {
-    EventMgr.Instance.AddEventListener(
-      EventKey.Http_Res_RankPage1,
-      this,
-      this.onRankListRes
-    );
+    EventMgr.Instance.AddEventListener(EventKey.Http_Res_RankPage1, this, this.onRankListRes);
   }
 
   private unRegistertEvent() {
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_RankPage1,
-      this,
-      this.onRankListRes
-    );
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_RankPage1, this, this.onRankListRes);
   }
 
   private async initUI() {
@@ -95,7 +87,12 @@ export default class RankPage1_Ctrl extends UIBase {
     await this.initUI();
     if (udate) {
       // udate.length = 0;
-      this.infoList = udate;
+      this.infoList = [...udate];
+      DebugUtils.Log("===============onRankListRes===================", this.infoList);
+      // for (let i = 0; i < 20; i++) {
+      //   this.infoList.push(udate[0])
+      // }
+
       if (this.infoList.length === 0) {
         EventMgr.Instance.Emit(EventKey.UI_RankNanData, "");
       } else {

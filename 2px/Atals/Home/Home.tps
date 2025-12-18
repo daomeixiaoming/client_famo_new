@@ -147,10 +147,7 @@
         <key>fileList</key>
         <array>
             <filename>imgs/Common</filename>
-            <filename>imgs/End</filename>
             <filename>imgs/Home</filename>
-            <filename>imgs/Nan</filename>
-            <filename>imgs/Rank</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

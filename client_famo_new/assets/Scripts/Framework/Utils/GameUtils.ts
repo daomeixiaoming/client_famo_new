@@ -1,4 +1,5 @@
 import { UICfg } from "../../Game/Config/GameConfig";
+import { ResMgrAsync } from "../Managers/ResMgrAsync";
 import UIMgr from "../Managers/UIMgr";
 
 /**
@@ -113,5 +114,23 @@ export default class GameUtils {
         }
 
         return cloneObj;
+    }
+
+    /**
+     *  使用异步图集修改图片
+     * @param abName 
+     * @param atalsName 
+     * @param path 
+     * @param spName 
+     */
+    public static SetSpData(abName: string, atalsName: string, path: string, spName: cc.Sprite) {
+        ResMgrAsync.Instance.IE_GetAsset(abName, atalsName, cc.SpriteAtlas).then((res: cc.SpriteAtlas) => {
+            if (res && spName) {
+                let sf = res.getSpriteFrame(path);
+                if (sf) {
+                    spName.spriteFrame = sf;
+                }
+            }
+        })
     }
 }

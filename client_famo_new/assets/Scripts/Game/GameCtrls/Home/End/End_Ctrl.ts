@@ -1,11 +1,9 @@
 import { ResMgr } from "../../../../Framework/Managers/ResMgr";
 import UIBase from "../../../../Framework/Managers/UIBase";
-import UIMgr from "../../../../Framework/Managers/UIMgr";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { protoGame } from "../../../../Proto/game";
-import { AbNames, AtalsCfg, Lngs } from "../../../Config/GameConfig";
+import { AbNames, Atals1Cfg, AtalsCfg, Lngs } from "../../../Config/GameConfig";
 import { BoxType, OpenBoxRequest } from "../../../Config/MsgCfg";
-import { ResCfg } from "../../../Config/ResConfig";
-import NetHttpMgr from "../../../Data/NetHttpMgr";
 import GameApp from "../../../GameApp";
 import GameLogic from "../../../GameLogic";
 
@@ -37,8 +35,8 @@ export default class End_Ctrl extends UIBase {
         this.AddButtonListener("node/bg/sp_bg/labCfg", this, this.onBoxCfgClick);
 
         this.lab_des = this.ViewComponent("node/bg/sp_bg/lab_des", cc.Label) as cc.Label;
-        this.lab_num = this.ViewComponent("node/bg/sp_bg/lab_num", cc.Label) as cc.Label;
-        this.sp_icon = this.ViewComponent("node/bg/sp_bg/sp_icon", cc.Sprite) as cc.Sprite;
+        this.lab_num = this.ViewComponent("node/bg/sp_bg/sp_score_bg/lab_num", cc.Label) as cc.Label;
+        this.sp_icon = this.ViewComponent("node/bg/sp_bg/sp_icon_di/sp_icon", cc.Sprite) as cc.Sprite;
 
         this.atals = ResMgr.Instance.getAsset(AbNames.Atals_Home, AtalsCfg.Home, cc.SpriteAtlas) as cc.SpriteAtlas;
     }
@@ -49,15 +47,15 @@ export default class End_Ctrl extends UIBase {
         let des = null;
         switch (btype) {
             case BoxType.Box_HJ:
-                path = "hoem_box2";
+                path = "end_icon_hj";
                 des = Lngs.GetBox2;
                 break;
             case BoxType.Box_BY:
-                path = "hoem_box1";
+                path = "end_icon_by";
                 des = Lngs.GetBox1;
                 break;
             case BoxType.Box_ZS:
-                path = "hoem_box3";
+                path = "end_icon_zs";
                 des = Lngs.GetBox3;
                 break;
             default:
@@ -68,10 +66,7 @@ export default class End_Ctrl extends UIBase {
             this.lab_des.string = des;
         }
         if (path) {
-            let sf = this.atals.getSpriteFrame(path);
-            if (sf) {
-                this.sp_icon.spriteFrame = sf;
-            }
+            GameUtils.SetSpData(AbNames.Atals1, Atals1Cfg.End, path, this.sp_icon);
         }
         this.param.id = data.id;
         this.param.num = 1;

@@ -1,173 +1,215 @@
 
 sp_atk2500.png
-size: 744,744
+size: 1336,1336
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-add2500_000
+击杀2_000
+  rotate: false
+  xy: 594, 14
+  size: 252, 241
+  orig: 375, 400
+  offset: 65, 54
+  index: -1
+击杀2_001
+  rotate: false
+  xy: 594, 14
+  size: 252, 241
+  orig: 375, 400
+  offset: 65, 54
+  index: -1
+击杀2_002
+  rotate: false
+  xy: 2, 40
+  size: 318, 286
+  orig: 375, 400
+  offset: 38, 48
+  index: -1
+击杀2_003
+  rotate: false
+  xy: 2, 40
+  size: 318, 286
+  orig: 375, 400
+  offset: 38, 48
+  index: -1
+击杀2_004
+  rotate: false
+  xy: 2, 328
+  size: 335, 278
+  orig: 375, 400
+  offset: 20, 54
+  index: -1
+击杀2_005
+  rotate: false
+  xy: 2, 328
+  size: 335, 278
+  orig: 375, 400
+  offset: 20, 54
+  index: -1
+击杀2_006
+  rotate: false
+  xy: 702, 1059
+  size: 331, 274
+  orig: 375, 400
+  offset: 24, 59
+  index: -1
+击杀2_007
+  rotate: false
+  xy: 702, 1059
+  size: 331, 274
+  orig: 375, 400
+  offset: 24, 59
+  index: -1
+击杀2_008
   rotate: true
-  xy: 2, 52
-  size: 203, 140
-  orig: 376, 380
-  offset: 68, 143
+  xy: 1035, 1007
+  size: 326, 268
+  orig: 375, 400
+  offset: 28, 62
   index: -1
-add2500_001
+击杀2_009
   rotate: true
-  xy: 2, 52
-  size: 203, 140
-  orig: 376, 380
-  offset: 68, 143
+  xy: 1035, 1007
+  size: 326, 268
+  orig: 375, 400
+  offset: 28, 62
   index: -1
-add2500_002
+击杀2_010
   rotate: false
-  xy: 2, 566
-  size: 255, 174
-  orig: 376, 380
-  offset: 57, 119
+  xy: 373, 749
+  size: 319, 262
+  orig: 375, 400
+  offset: 33, 62
   index: -1
-add2500_003
+击杀2_011
   rotate: false
-  xy: 2, 566
-  size: 255, 174
-  orig: 376, 380
-  offset: 57, 119
+  xy: 373, 749
+  size: 319, 262
+  orig: 375, 400
+  offset: 33, 62
   index: -1
-add2500_004
+击杀2_012
   rotate: false
-  xy: 2, 414
-  size: 225, 150
-  orig: 376, 380
-  offset: 56, 141
+  xy: 2, 963
+  size: 369, 370
+  orig: 375, 400
+  offset: 0, 1
   index: -1
-add2500_005
+击杀2_013
   rotate: false
-  xy: 559, 213
-  size: 175, 127
-  orig: 376, 380
-  offset: 101, 150
+  xy: 2, 963
+  size: 369, 370
+  orig: 375, 400
+  offset: 0, 1
   index: -1
-add2500_006
+击杀2_014
   rotate: false
-  xy: 559, 213
-  size: 175, 127
-  orig: 376, 380
-  offset: 101, 150
+  xy: 2, 608
+  size: 356, 353
+  orig: 375, 400
+  offset: 2, 7
   index: -1
-add2500_007
+击杀2_015
+  rotate: false
+  xy: 373, 1013
+  size: 327, 320
+  orig: 375, 400
+  offset: 16, 22
+  index: -1
+击杀2_016
+  rotate: false
+  xy: 848, 6
+  size: 247, 245
+  orig: 375, 400
+  offset: 50, 59
+  index: -1
+击杀2_017
+  rotate: false
+  xy: 961, 492
+  size: 261, 247
+  orig: 375, 400
+  offset: 50, 58
+  index: -1
+击杀2_018
+  rotate: false
+  xy: 649, 309
+  size: 257, 245
+  orig: 375, 400
+  offset: 54, 58
+  index: -1
+击杀2_019
+  rotate: false
+  xy: 339, 257
+  size: 286, 244
+  orig: 375, 400
+  offset: 45, 59
+  index: -1
+击杀2_020
+  rotate: false
+  xy: 360, 503
+  size: 287, 244
+  orig: 375, 400
+  offset: 44, 60
+  index: -1
+击杀2_021
+  rotate: false
+  xy: 702, 793
+  size: 270, 264
+  orig: 375, 400
+  offset: 53, 40
+  index: -1
+击杀2_022
+  rotate: false
+  xy: 974, 741
+  size: 270, 264
+  orig: 375, 400
+  offset: 53, 40
+  index: -1
+击杀2_023
   rotate: true
-  xy: 440, 66
-  size: 177, 117
-  orig: 376, 380
-  offset: 111, 147
+  xy: 322, 20
+  size: 235, 270
+  orig: 375, 400
+  offset: 58, 35
   index: -1
-add2500_008
-  rotate: false
-  xy: 559, 85
-  size: 172, 126
-  orig: 376, 380
-  offset: 118, 146
-  index: -1
-add2500_009
-  rotate: false
-  xy: 559, 85
-  size: 172, 126
-  orig: 376, 380
-  offset: 118, 146
-  index: -1
-add2500_010
+击杀2_024
   rotate: true
-  xy: 144, 56
-  size: 199, 127
-  orig: 376, 380
-  offset: 91, 145
+  xy: 694, 556
+  size: 235, 265
+  orig: 375, 400
+  offset: 58, 35
   index: -1
-add2500_011
+击杀2_025
   rotate: true
-  xy: 144, 56
-  size: 199, 127
-  orig: 376, 380
-  offset: 91, 145
+  xy: 908, 253
+  size: 237, 249
+  orig: 375, 400
+  offset: 51, 36
   index: -1
-add2500_012
-  rotate: false
-  xy: 273, 245
-  size: 197, 107
-  orig: 376, 380
-  offset: 91, 147
+击杀2_026
+  rotate: true
+  xy: 908, 253
+  size: 237, 249
+  orig: 375, 400
+  offset: 51, 36
   index: -1
-add2500_013
+击杀2_027
   rotate: false
-  xy: 2, 257
-  size: 208, 155
-  orig: 376, 380
-  offset: 88, 137
+  xy: 1097, 10
+  size: 236, 241
+  orig: 375, 400
+  offset: 51, 34
   index: -1
-add2500_014
+击杀2_028
   rotate: false
-  xy: 2, 257
-  size: 208, 155
-  orig: 376, 380
-  offset: 88, 137
+  xy: 1097, 10
+  size: 236, 241
+  orig: 375, 400
+  offset: 51, 34
   index: -1
-add2500_015
+击杀2_029
   rotate: false
-  xy: 499, 342
-  size: 230, 206
-  orig: 376, 380
-  offset: 86, 90
-  index: -1
-add2500_016
-  rotate: false
-  xy: 499, 550
-  size: 238, 190
-  orig: 376, 380
-  offset: 81, 84
-  index: -1
-add2500_017
-  rotate: false
-  xy: 499, 550
-  size: 238, 190
-  orig: 376, 380
-  offset: 81, 84
-  index: -1
-add2500_018
-  rotate: false
-  xy: 259, 549
-  size: 238, 191
-  orig: 376, 380
-  offset: 83, 81
-  index: -1
-add2500_019
-  rotate: false
-  xy: 259, 549
-  size: 238, 191
-  orig: 376, 380
-  offset: 83, 81
-  index: -1
-add2500_020
-  rotate: false
-  xy: 229, 354
-  size: 216, 193
-  orig: 376, 380
-  offset: 106, 80
-  index: -1
-add2500_021
-  rotate: false
-  xy: 273, 47
-  size: 165, 196
-  orig: 376, 380
-  offset: 159, 79
-  index: -1
-add2500_022
-  rotate: false
-  xy: 273, 47
-  size: 165, 196
-  orig: 376, 380
-  offset: 159, 79
-  index: -1
-add2500_023
-  rotate: false
-  xy: 739, 739
+  xy: 360, 960
   size: 1, 1
   orig: 1, 1
   offset: 0, 0

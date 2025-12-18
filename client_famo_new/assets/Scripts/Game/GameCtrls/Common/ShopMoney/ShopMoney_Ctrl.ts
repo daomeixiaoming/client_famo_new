@@ -39,6 +39,7 @@ export default class ShopMoney_Ctrl extends UIBase {
 
     async start() {
         this.getListData();
+        this.RunAnimation("node/bg");
     }
 
     protected onDestroy(): void {

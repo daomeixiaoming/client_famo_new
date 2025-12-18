@@ -67,10 +67,7 @@ export default class Rank_Ctrl extends UIBase {
     this.nanNode.active = false;
     this.nanNode.getComponentInChildren(cc.Label).string = Lngs.RankDes2;
 
-    this.togContainer = this.ViewComponent(
-      "node/bg/toggleContainer",
-      cc.ToggleContainer
-    ) as cc.ToggleContainer;
+    this.togContainer = this.ViewComponent("node/bg/toggleContainer", cc.ToggleContainer) as cc.ToggleContainer;
     this.togContainer.toggleItems.forEach(
       (toggle: cc.Toggle, index: number) => {
         toggle.node.on(
@@ -85,29 +82,13 @@ export default class Rank_Ctrl extends UIBase {
   }
 
   private registerEvent(): void {
-    EventMgr.Instance.AddEventListener(
-      EventKey.UI_RankShowDetial,
-      this,
-      this.onShowDetial
-    );
-    EventMgr.Instance.AddEventListener(
-      EventKey.UI_RankNanData,
-      this,
-      this.onNanStatus
-    );
+    EventMgr.Instance.AddEventListener(EventKey.UI_RankShowDetial, this, this.onShowDetial);
+    EventMgr.Instance.AddEventListener(EventKey.UI_RankNanData, this, this.onNanStatus);
   }
 
   private unRegisterEvent(): void {
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_RankShowDetial,
-      this,
-      this.onShowDetial
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_RankNanData,
-      this,
-      this.onNanStatus
-    );
+    EventMgr.Instance.RemoveListenner(EventKey.UI_RankShowDetial, this, this.onShowDetial);
+    EventMgr.Instance.RemoveListenner(EventKey.UI_RankNanData, this, this.onNanStatus);
   }
 
   private initData(): void { }
@@ -160,29 +141,17 @@ export default class Rank_Ctrl extends UIBase {
 
   // 显示今天
   private async showView1() {
-    await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.RankPage1,
-      AbNames.Prefabs,
-      this.page
-    );
+    await UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.RankPage1, AbNames.Prefabs, this.page);
   }
 
   // 显示昨天
   private async showView2() {
-    await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.RankPage2,
-      AbNames.Prefabs,
-      this.page
-    );
+    await UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.RankPage2, AbNames.Prefabs, this.page);
   }
 
   // 显示伤害榜
   private async showView3() {
-    await UIMgr.Instance.ShowUIViewAsync(
-      ResCfg.Prefabs.RankPage3,
-      AbNames.Prefabs,
-      this.page
-    );
+    await UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.RankPage3, AbNames.Prefabs, this.page);
   }
 
   //获取今天的数据

@@ -7,6 +7,7 @@ import { EventKey } from "../../../Config/EventCfg";
 import { AbNames, Lngs, UICfg } from "../../../Config/GameConfig";
 import { ResCfg } from "../../../Config/ResConfig";
 import NativeMgr from "../../../Data/NativeMgr";
+import GameApp from "../../../GameApp";
 
 const { ccclass, property } = cc._decorator;
 /**
@@ -134,10 +135,8 @@ export default class Notice_Ctrl extends UIBase {
 
     // 点击不同意
     private onBtnNotAgree(): void {
-        // NativeMgr.Instance.backToApp();
-        // 返回大厅
-        EventMgr.Instance.Emit(EventKey.UI_GotoLogin, "");
-        this.node.destroy();
+        // 退出游戏
+        GameApp.Instance.onExitGame();
     }
 
     // 点击弹出玩法约定界面

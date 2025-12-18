@@ -50,27 +50,13 @@ export default class RewardPrice_Ctrl extends UIBase {
     this.viewBg = this.view["node/bg"] as cc.Node;
     this.viewBg.active = false;
     this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
-    this.scrollview = this.ViewComponent(
-      "node/bg/sp_bg/scrollView",
-      cc.ScrollView
-    ) as cc.ScrollView;
-    this.sp_title = this.ViewComponent(
-      "node/bg/sp_bg/sp_title",
-      cc.Sprite
-    ) as cc.Sprite;
-    this.widget_l = this.ViewComponent(
-      "node/bg/sp_bg/scrollView/view/content/layout_view",
-      cc.Widget
-    ) as cc.Widget;
+    this.scrollview = this.ViewComponent("node/bg/sp_bg/scrollView", cc.ScrollView) as cc.ScrollView;
+    this.sp_title = this.ViewComponent("node/bg/sp_bg/sp_title", cc.Sprite) as cc.Sprite;
+    this.widget_l = this.ViewComponent("node/bg/sp_bg/scrollView/view/content/layout_view", cc.Widget) as cc.Widget;
 
-    this.girdParent = this.view[
-      "node/bg/sp_bg/scrollView/view/content/layout_view/mid"
-    ] as cc.Node;
+    this.girdParent = this.view["node/bg/sp_bg/scrollView/view/content/layout_view/mid"] as cc.Node;
 
-    this.labDes = this.ViewComponent(
-      "node/bg/sp_bg/scrollView/view/content/des/lab",
-      cc.Label
-    ) as cc.Label;
+    this.labDes = this.ViewComponent("node/bg/sp_bg/scrollView/view/content/des/lab", cc.Label) as cc.Label;
 
     this.cellItem = this.view["node/bg/sp_bg/ItemCell"] as cc.Node;
     this.cellItem.active = false;
@@ -78,7 +64,7 @@ export default class RewardPrice_Ctrl extends UIBase {
     EventMgr.Instance.AddEventListener(EventKey.Http_Res_GetBoxConfig, this, this.onMsgGetBoxCfgRes);
   }
 
-  private async onMsgGetBoxCfgRes(uanme: string, udata: BoxConfigItem[]) {
+  private onMsgGetBoxCfgRes(uanme: string, udata: BoxConfigItem[]) {
     DebugUtils.Log(
       "=============RewardPrice_Ctrl.onMsgGetBoxCfgRes=============="
     );

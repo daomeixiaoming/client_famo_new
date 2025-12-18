@@ -4,53 +4,14 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>end_btn_open.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,86},{296,80}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{296,80}}</string>
-                <key>sourceSize</key>
-                <string>{296,80}</string>
-            </dict>
-            <key>end_btn_openall.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{300,86},{236,80}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{236,80}}</string>
-                <key>sourceSize</key>
-                <string>{236,80}</string>
-            </dict>
-            <key>end_btn_openone.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,168},{236,80}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{236,80}}</string>
-                <key>sourceSize</key>
-                <string>{236,80}</string>
-            </dict>
             <key>hoem_box1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,168},{64,86}}</string>
+                <string>{{214,2},{64,86}}</string>
                 <key>offset</key>
                 <string>{1,-1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{13,2},{64,86}}</string>
                 <key>sourceSize</key>
@@ -59,11 +20,11 @@
             <key>hoem_box2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{404,168},{68,82}}</string>
+                <string>{{280,2},{68,82}}</string>
                 <key>offset</key>
                 <string>{-1,2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{9,1},{68,82}}</string>
                 <key>sourceSize</key>
@@ -72,7 +33,7 @@
             <key>hoem_box3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{240,168},{74,80}}</string>
+                <string>{{350,2},{74,80}}</string>
                 <key>offset</key>
                 <string>{0,2}</string>
                 <key>rotated</key>
@@ -85,7 +46,7 @@
             <key>home_com_item_bg.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{644,86},{104,104}}</string>
+                <string>{{108,2},{104,104}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +59,7 @@
             <key>home_com_item_bg2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{538,86},{104,104}}</string>
+                <string>{{2,2},{104,104}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -108,149 +69,6 @@
                 <key>sourceSize</key>
                 <string>{104,104}</string>
             </dict>
-            <key>home_voice_close.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{592,192},{38,30}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,7},{38,30}}</string>
-                <key>sourceSize</key>
-                <string>{44,44}</string>
-            </dict>
-            <key>home_voice_open.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{632,192},{36,30}}</string>
-                <key>offset</key>
-                <string>{-1,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{3,7},{36,30}}</string>
-                <key>sourceSize</key>
-                <string>{44,44}</string>
-            </dict>
-            <key>rank_box1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{240,168},{74,80}}</string>
-                <key>offset</key>
-                <string>{0,2}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{7,2},{74,80}}</string>
-                <key>sourceSize</key>
-                <string>{88,88}</string>
-            </dict>
-            <key>rank_box2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{404,168},{68,82}}</string>
-                <key>offset</key>
-                <string>{-1,2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{9,1},{68,82}}</string>
-                <key>sourceSize</key>
-                <string>{88,88}</string>
-            </dict>
-            <key>rank_box3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{316,168},{64,86}}</string>
-                <key>offset</key>
-                <string>{1,-1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{13,2},{64,86}}</string>
-                <key>sourceSize</key>
-                <string>{88,88}</string>
-            </dict>
-            <key>rank_itembg0.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,58},{686,26}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,2},{686,26}}</string>
-                <key>sourceSize</key>
-                <string>{690,30}</string>
-            </dict>
-            <key>rank_itembg1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,30},{686,26}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,2},{686,26}}</string>
-                <key>sourceSize</key>
-                <string>{690,30}</string>
-            </dict>
-            <key>rank_itembg2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{686,26}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{2,2},{686,26}}</string>
-                <key>sourceSize</key>
-                <string>{690,30}</string>
-            </dict>
-            <key>rank_lv1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{488,168},{50,44}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,44}}</string>
-                <key>sourceSize</key>
-                <string>{50,44}</string>
-            </dict>
-            <key>rank_lv2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{690,2},{56,54}}</string>
-                <key>offset</key>
-                <string>{-2,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,3},{56,54}}</string>
-                <key>sourceSize</key>
-                <string>{60,60}</string>
-            </dict>
-            <key>rank_lv3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{534,192},{54,56}}</string>
-                <key>offset</key>
-                <string>{-2,2}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{1,0},{54,56}}</string>
-                <key>sourceSize</key>
-                <string>{60,60}</string>
-            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -259,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>Home.png</string>
             <key>size</key>
-            <string>{750,251}</string>
+            <string>{426,108}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:9610b8ca3923aa4f4e87ad5d11de53d3$</string>
+            <string>$TexturePacker:SmartUpdate:4752db99a5ebc8e641314cf895638285$</string>
             <key>textureFileName</key>
             <string>Home.png</string>
         </dict>
