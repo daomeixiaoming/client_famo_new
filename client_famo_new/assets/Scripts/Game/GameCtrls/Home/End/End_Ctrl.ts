@@ -4,6 +4,7 @@ import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { protoGame } from "../../../../Proto/game";
 import { AbNames, Atals1Cfg, AtalsCfg, Lngs } from "../../../Config/GameConfig";
 import { BoxType, OpenBoxRequest } from "../../../Config/MsgCfg";
+import { GuiCfg } from "../../../Config/ResConfig";
 import GameApp from "../../../GameApp";
 import GameLogic from "../../../GameLogic";
 
@@ -30,6 +31,9 @@ export default class End_Ctrl extends UIBase {
     }
 
     private initUI(): void {
+        let spBg = this.ViewComponent("node/bg/sp_bg", cc.Sprite) as cc.Sprite;
+        GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.end_bg0, spBg);
+
         this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
         this.AddButtonListener("node/bg/sp_bg/btn", this, this.onStartOpenClick);
         this.AddButtonListener("node/bg/sp_bg/labCfg", this, this.onBoxCfgClick);

@@ -1,15 +1,13 @@
 import GridListView from "../../../../Framework/Engine/GridListView";
 import EventMgr from "../../../../Framework/Managers/EventMgr";
-import { ResMgr } from "../../../../Framework/Managers/ResMgr";
 import { ResMgrAsync } from "../../../../Framework/Managers/ResMgrAsync";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import UIMgr, { UILayer } from "../../../../Framework/Managers/UIMgr";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
-import { AbNames, Lngs, UICfg } from "../../../Config/GameConfig";
-import { ResCfg } from "../../../Config/ResConfig";
-import NetHttpMgr from "../../../Data/NetHttpMgr";
-import RankDetial_Ctrl from "./RankDetial_Ctrl";
+import { AbNames, Lngs } from "../../../Config/GameConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 const { ccclass, property } = cc._decorator;
 
 /**
@@ -28,7 +26,6 @@ export default class Rank_Ctrl extends UIBase {
   list: any;
   infoList1: any = [];
   infoList2: any = [];
-  infoList3: any = [];
   nanNode: cc.Node;
   page: cc.Node;
 
@@ -49,6 +46,9 @@ export default class Rank_Ctrl extends UIBase {
   }
 
   private async initUI() {
+    let spBg = this.ViewComponent("node/bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.record_bg, spBg);
+
     this.AddButtonListener("node/bg/sp_title/btn_close", this, this.onCloseBtn);
 
     this.page = this.view["node/bg/pages"] as cc.Node;
@@ -82,12 +82,10 @@ export default class Rank_Ctrl extends UIBase {
   }
 
   private registerEvent(): void {
-    EventMgr.Instance.AddEventListener(EventKey.UI_RankShowDetial, this, this.onShowDetial);
     EventMgr.Instance.AddEventListener(EventKey.UI_RankNanData, this, this.onNanStatus);
   }
 
   private unRegisterEvent(): void {
-    EventMgr.Instance.RemoveListenner(EventKey.UI_RankShowDetial, this, this.onShowDetial);
     EventMgr.Instance.RemoveListenner(EventKey.UI_RankNanData, this, this.onNanStatus);
   }
 
@@ -102,20 +100,6 @@ export default class Rank_Ctrl extends UIBase {
     this.showView(index);
   }
 
-  //请求讨伐记录数据
-  private async onShowDetial(uname: string, udata: string) {
-    // cc.log('onShowDetial11111')
-    // NetHttpMgr.Instance.GetRankRecordList(udata);
-    DebugUtils.Log("=============onShowDetial===========");
-    // if (res) {
-    //     let com = UIMgr.Instance.ShowUIView(UICfg.RankDetial, AbNames.Prefab_Home) as RankDetial_Ctrl;
-    //     com.setData(res);
-    // }
-    let parent = UIMgr.Instance.GetParent(UILayer.UI_Layer3);
-    let com = await UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.RankDetial, AbNames.Prefabs, parent);
-    com.InitScene(udata);
-  }
-
   private onNanStatus(uname: string, udata: any): void {
     this.setNanActive(true);
   }
@@ -127,8 +111,6 @@ export default class Rank_Ctrl extends UIBase {
       this.showView1();
     } else if (idx === 1) {
       this.showView2();
-    } else if (idx === 2) {
-      this.showView3();
     }
   }
 
@@ -149,19 +131,12 @@ export default class Rank_Ctrl extends UIBase {
     await UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.RankPage2, AbNames.Prefabs, this.page);
   }
 
-  // 显示伤害榜
-  private async showView3() {
-    await UIMgr.Instance.ShowUIViewAsync(ResCfg.Prefabs.RankPage3, AbNames.Prefabs, this.page);
-  }
-
   //获取今天的数据
   public setData1(data: any[], idx: number = 0) {
     if (idx === 0) {
       this.infoList1 = data;
     } else if (idx === 1) {
       this.infoList2 = data;
-    } else {
-      this.infoList3 = data;
     }
 
     this.showView(idx);

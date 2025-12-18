@@ -8,7 +8,7 @@ import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
 import { AbNames, UICfg } from "../../../Config/GameConfig";
 import { GameMallProductResp, MallItem, PageResponseGameMallProductResp } from "../../../Config/MsgCfg";
-import { ResCfg } from "../../../Config/ResConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 import NativeMgr from "../../../Data/NativeMgr";
 import NetHttpMgr from "../../../Data/NetHttpMgr";
 import GameLogic from "../../../GameLogic";
@@ -63,6 +63,9 @@ export default class ShopMoney_Ctrl extends UIBase {
     }
 
     private initUI() {
+        let spBg = this.ViewComponent("node/bg/bg_3", cc.Sprite) as cc.Sprite;
+        GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.shop_bg, spBg);
+
         this.AddButtonListener("node/bg/btn_close", this, this.onCloseBtn);
         this.AddButtonListener("node/bg/item_bg/btn_add", this, this.onAddCoinClick);
 

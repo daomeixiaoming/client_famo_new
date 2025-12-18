@@ -4,6 +4,7 @@ import { ResMgrAsync } from "../../../../Framework/Managers/ResMgrAsync";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import CocosUtils from "../../../../Framework/Utils/CocosUtils";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
 import { AbNames, UICfg } from "../../../Config/GameConfig";
 import {
@@ -11,7 +12,7 @@ import {
   MallItem,
   PageResponseGameMallProductResp,
 } from "../../../Config/MsgCfg";
-import { ResCfg } from "../../../Config/ResConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 import NetHttpMgr from "../../../Data/NetHttpMgr";
 import GameLogic from "../../../GameLogic";
 import ShopItem_Ctrl from "./ShopItem_Ctrl";
@@ -55,6 +56,9 @@ export default class Shop_Ctrl extends UIBase {
   }
 
   private initUI() {
+    let spBg = this.ViewComponent("node/bg/bg_3", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.shop_bg2, spBg);
+
     this.AddButtonListener("node/bg/btn_close", this, this.onCloseBtn);
     this.AddButtonListener("node/bg/item_bg/btn_add", this, this.onBtnAddClick);
 

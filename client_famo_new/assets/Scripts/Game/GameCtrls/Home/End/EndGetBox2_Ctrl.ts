@@ -1,9 +1,11 @@
 import EventMgr from "../../../../Framework/Managers/EventMgr";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
-import { Lngs } from "../../../Config/GameConfig";
+import { AbNames, Lngs } from "../../../Config/GameConfig";
 import { BoxType, GiftItem, OpenBoxRequest } from "../../../Config/MsgCfg";
+import { GuiCfg } from "../../../Config/ResConfig";
 import NetHttpMgr from "../../../Data/NetHttpMgr";
 import GameLogic from "../../../GameLogic";
 import EndGetBoxItem_Ctrl from "./EndGetBoxItem_Ctrl";
@@ -32,6 +34,9 @@ export default class EndGetBox2_Ctrl extends UIBase {
     }
 
     private initUI(): void {
+        let spBg = this.ViewComponent("node/bg/sp_bg", cc.Sprite) as cc.Sprite;
+        GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.end_bg0, spBg);
+
         this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
         this.AddButtonListener("node/bg/sp_bg/btns/btn1", this, this.onBtnClickOne);
         this.AddButtonListener("node/bg/sp_bg/btns/btn2", this, this.onBtnClickAll);

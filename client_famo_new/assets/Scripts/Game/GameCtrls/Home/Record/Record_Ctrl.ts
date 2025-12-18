@@ -3,13 +3,14 @@ import EventMgr from "../../../../Framework/Managers/EventMgr";
 import { ResMgr } from "../../../../Framework/Managers/ResMgr";
 import { ResMgrAsync } from "../../../../Framework/Managers/ResMgrAsync";
 import UIBase from "../../../../Framework/Managers/UIBase";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
 import { AbNames, Lngs, UICfg } from "../../../Config/GameConfig";
 import {
   PageResultRewardHistoryItem,
   RewardHistoryItem,
 } from "../../../Config/MsgCfg";
-import { ResCfg } from "../../../Config/ResConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 import NetHttpMgr from "../../../Data/NetHttpMgr";
 import RecordItem_Ctrl from "./RecordItem_Ctrl";
 
@@ -45,6 +46,9 @@ export default class Record_Ctrl extends UIBase {
   }
 
   private async initUI() {
+    let spBg = this.ViewComponent("node/bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.record_bg, spBg);
+
     this.AddButtonListener("node/bg/sp_title/btn_close", this, this.onCloseBtn);
 
     this.nanNode = this.view["node/bg/bg2"] as cc.Node;

@@ -147,7 +147,6 @@
         <key>fileList</key>
         <array>
             <filename>imgs/rewardprice_9line2.png</filename>
-            <filename>imgs/rewardprice_bg.png</filename>
             <filename>imgs/rewardprice_title1.png</filename>
             <filename>imgs/rewardprice_title2.png</filename>
             <filename>imgs/rewardprice_9bg.png</filename>

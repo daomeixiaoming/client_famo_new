@@ -94,7 +94,7 @@ export default class UIBase extends cc.Component {
             .call(() => {
                 node.active = true;
             })
-            .to(0.12, { scale: 1.1 })
+            .to(0.08, { scale: 1.1 })
             .to(0.1, { scale: 0.9 })
             .to(0.1, { scale: 1 }).call(
                 () => {

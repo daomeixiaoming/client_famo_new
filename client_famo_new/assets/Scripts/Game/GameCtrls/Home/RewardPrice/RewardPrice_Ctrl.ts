@@ -4,6 +4,7 @@ import { ResMgrAsync } from "../../../../Framework/Managers/ResMgrAsync";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import UIMgr from "../../../../Framework/Managers/UIMgr";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
 import { AbNames, Lngs } from "../../../Config/GameConfig";
 import {
@@ -12,7 +13,7 @@ import {
   RankRewardConfig,
   RewardResponse,
 } from "../../../Config/MsgCfg";
-import { ResCfg } from "../../../Config/ResConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 import NetHttpMgr from "../../../Data/NetHttpMgr";
 import GameLogic from "../../../GameLogic";
 import RewardPriceItem_Ctrl from "./RewardPriceItem_Ctrl";
@@ -62,6 +63,9 @@ export default class RewardPrice_Ctrl extends UIBase {
     this.cellItem.active = false;
     // 注册事件
     EventMgr.Instance.AddEventListener(EventKey.Http_Res_GetBoxConfig, this, this.onMsgGetBoxCfgRes);
+    // 背景
+    let bg = this.ViewComponent("node/bg/sp_bg/bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.rewardPrice_bg, bg);
   }
 
   private onMsgGetBoxCfgRes(uanme: string, udata: BoxConfigItem[]) {

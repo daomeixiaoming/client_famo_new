@@ -1,8 +1,11 @@
 import EventMgr from "../../../../Framework/Managers/EventMgr";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import CocosUtils from "../../../../Framework/Utils/CocosUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
+import { AbNames } from "../../../Config/GameConfig";
 import { RewardResponse } from "../../../Config/MsgCfg";
+import { GuiCfg } from "../../../Config/ResConfig";
 import GameLogic from "../../../GameLogic";
 
 const { ccclass, property } = cc._decorator;
@@ -45,6 +48,9 @@ export default class Help_Ctrl extends UIBase {
   }
 
   private initUI(): void {
+    let spBg = this.ViewComponent("node/bg/sp_bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.help_bg, spBg);
+
     this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
 
     this.labItem = this.view["node/bg/sp_bg/scrollView/view/labDes"] as cc.Node;

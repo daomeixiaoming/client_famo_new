@@ -10,6 +10,7 @@ import {
   OpenBoxRequest,
   OpenBoxResponse,
 } from "../../../Config/MsgCfg";
+import { GuiCfg } from "../../../Config/ResConfig";
 import GameApp from "../../../GameApp";
 import GameLogic from "../../../GameLogic";
 
@@ -44,6 +45,9 @@ export default class EndOpen_Ctrl extends UIBase {
   }
 
   private initUI(): void {
+    let spBg = this.ViewComponent("node/bg/sp_bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.end_bg2, spBg);
+
     this.sp_icon = this.ViewComponent("node/bg/sp_bg/sp_icon_di/sp_icon", cc.Sprite) as cc.Sprite;
     this.lb_num = this.ViewComponent("node/bg/sp_bg/labs/lab_num", cc.Label) as cc.Label;
     this.lab_des = this.ViewComponent("node/bg/sp_bg/labs/lab_des", cc.Label) as cc.Label;

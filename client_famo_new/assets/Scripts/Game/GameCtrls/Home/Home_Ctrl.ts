@@ -14,7 +14,7 @@ import { protoGame } from "../../../Proto/game";
 import { EventKey } from "../../Config/EventCfg";
 import { AbNames, Atals1Cfg, Lngs, NetCfg } from "../../Config/GameConfig";
 import { AtkType, AttackInfo, AttackResponse, BoxInfo, BoxType, HomeResponse, OpenBoxResponse, } from "../../Config/MsgCfg";
-import { ResCfg, SpineCfg } from "../../Config/ResConfig";
+import { GuiCfg, ResCfg, SpineCfg } from "../../Config/ResConfig";
 import GameApp from "../../GameApp";
 import GameLogic from "../../GameLogic";
 import EndGetBox2_Ctrl from "./End/EndGetBox2_Ctrl";
@@ -61,8 +61,6 @@ export default class Home_Ctrl extends UIBase {
   isAddBoss = false;
   isAddHp = false;
   isAddLight = false;
-  // boss 动画
-  spBoss: sp.Skeleton;
 
   onLoad() {
     super.onLoad();
@@ -115,6 +113,11 @@ export default class Home_Ctrl extends UIBase {
   }
 
   private initUI() {
+    let bgCur = this.ViewComponent("node/home_bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.home_bg, bgCur);
+    let spBoss = this.ViewComponent("node/svgas/svga_boss/sp_boss", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.game_boss, spBoss);
+
     this.AddButtonListener("node/btn_close", this, this.onBtnBackClick);
     this.AddButtonListener("node/btns/btn1", this, this.onBtnRankClick); //排行榜
     this.AddButtonListener("node/btns/btn2", this, this.onBtnRecordClick); //中中奖记录
@@ -173,16 +176,12 @@ export default class Home_Ctrl extends UIBase {
     this.boss.active = true;
 
     // 创建Boss动画
-    this.spBoss = this.ViewComponent("node/svgas/svga_boss/AniBoss", sp.Skeleton) as sp.Skeleton;
     this.createBoss();
+    this.createSnow();
+    this.createCircle();
+
     // 请求大厅场景消息
     GameLogic.Instance.enterHome();
-
-    // 底座光
-    this.createLight();
-
-    // 血条
-    this.createHp();
   }
 
   // 更新所有按钮的状态，防止狂点
@@ -210,18 +209,8 @@ export default class Home_Ctrl extends UIBase {
   /** 播放Boss动画 */
   private createBoss() {
     // Boss节点
+    let spAni = this.ViewComponent("node/svgas/svga_boss/AniBoss", sp.Skeleton) as sp.Skeleton;
     ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_boss, sp.SkeletonData).then((res: sp.SkeletonData) => {
-      if (res && this.spBoss) {
-        this.spBoss.skeletonData = res;
-        this.spBoss.setAnimation(0, "animation", true);
-      }
-    })
-  }
-
-  /** 创建底座光动画 */
-  private createLight() {
-    let spAni = this.ViewComponent("node/svgas/ani_light1/sp_light", sp.Skeleton) as sp.Skeleton;
-    ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_light, sp.SkeletonData).then((res: sp.SkeletonData) => {
       if (res && spAni) {
         spAni.skeletonData = res;
         spAni.setAnimation(0, "animation", true);
@@ -229,10 +218,21 @@ export default class Home_Ctrl extends UIBase {
     })
   }
 
-  /** 血条动画 */
-  private async createHp() {
-    let spAni = this.ViewComponent("node/home_hp/aniNode/hpAniNode/sp_hp", sp.Skeleton) as sp.Skeleton;
-    ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_hp, sp.SkeletonData).then((res: sp.SkeletonData) => {
+  /** 创建落雪动画 */
+  private createSnow() {
+    let spAni = this.ViewComponent("node/svgas/ani_snow/sp_snow", sp.Skeleton) as sp.Skeleton;
+    ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_snow, sp.SkeletonData).then((res: sp.SkeletonData) => {
+      if (res && spAni) {
+        spAni.skeletonData = res;
+        spAni.setAnimation(0, "animation", true);
+      }
+    })
+  }
+
+  /** 创建光圈动画 */
+  private createCircle() {
+    let spAni = this.ViewComponent("node/svgas/svga_boss/circle/Anicircle", sp.Skeleton) as sp.Skeleton;
+    ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_circle, sp.SkeletonData).then((res: sp.SkeletonData) => {
       if (res && spAni) {
         spAni.skeletonData = res;
         spAni.setAnimation(0, "animation", true);

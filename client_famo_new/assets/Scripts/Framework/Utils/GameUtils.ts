@@ -133,4 +133,18 @@ export default class GameUtils {
             }
         })
     }
+
+    /**
+     * 使用散图
+     * @param abName 
+     * @param atalsName 
+     * @param spName 
+     */
+    public static SetSpTexture(abName: string, atalsName: string, spName: cc.Sprite) {
+        ResMgrAsync.Instance.IE_GetAsset(abName, atalsName, cc.SpriteFrame).then((res: cc.SpriteFrame) => {
+            if (res && spName) {
+                spName.spriteFrame = res;
+            }
+        })
+    }
 }

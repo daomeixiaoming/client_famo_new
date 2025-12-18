@@ -1,0 +1,13 @@
+
+sp_circle.png
+size: 368,368
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+最新出奖英雄光圈
+  rotate: false
+  xy: 2, 2
+  size: 362, 362
+  orig: 364, 364
+  offset: 1, 1
+  index: -1

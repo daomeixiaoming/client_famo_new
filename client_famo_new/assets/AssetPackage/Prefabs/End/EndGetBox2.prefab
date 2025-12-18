@@ -956,7 +956,7 @@
   {
     "__type__": "cc.Node",
     "_name": "labs",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
@@ -1486,10 +1486,10 @@
     "_enabled": true,
     "alignMode": 1,
     "_target": null,
-    "_alignFlags": 20,
+    "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 176,
+    "_top": 123,
     "_bottom": 512,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -3605,7 +3605,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 520,
+      "width": 518,
       "height": 80
     },
     "_anchorPoint": {
@@ -3687,7 +3687,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -135,
+        -134,
         0,
         0,
         0,
@@ -3899,8 +3899,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
-      "height": 90
+      "width": 248,
+      "height": 88
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -4100,7 +4100,7 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 520,
+      "width": 518,
       "height": 80
     },
     "_resize": 1,
@@ -4175,9 +4175,7 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "49b289a4-58d2-4bd1-a579-860c1cbbc278"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 2,
     "_fillType": 0,
@@ -4202,7 +4200,7 @@
     "_enabled": true,
     "alignMode": 1,
     "_target": null,
-    "_alignFlags": 20,
+    "_alignFlags": 16,
     "_left": 0,
     "_right": 0,
     "_top": 168,
@@ -4240,7 +4238,7 @@
     "_enabled": true,
     "alignMode": 1,
     "_target": null,
-    "_alignFlags": 20,
+    "_alignFlags": 16,
     "_left": 0,
     "_right": 0,
     "_top": 0,

@@ -1,0 +1,899 @@
+
+sp_snow.png
+size: 2012,2012
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+雪_033
+  rotate: true
+  xy: 504, 166
+  size: 371, 497
+  orig: 375, 500
+  offset: 3, 2
+  index: -1
+雪_034
+  rotate: true
+  xy: 504, 166
+  size: 371, 497
+  orig: 375, 500
+  offset: 3, 2
+  index: -1
+雪_035
+  rotate: true
+  xy: 1006, 907
+  size: 367, 499
+  orig: 375, 500
+  offset: 2, 1
+  index: -1
+雪_036
+  rotate: true
+  xy: 1507, 907
+  size: 367, 499
+  orig: 375, 500
+  offset: 2, 1
+  index: -1
+雪_037
+  rotate: true
+  xy: 1507, 907
+  size: 367, 499
+  orig: 375, 500
+  offset: 2, 1
+  index: -1
+雪_038
+  rotate: true
+  xy: 1002, 1276
+  size: 366, 500
+  orig: 375, 500
+  offset: 2, 0
+  index: -1
+雪_039
+  rotate: true
+  xy: 1504, 1276
+  size: 366, 500
+  orig: 375, 500
+  offset: 2, 0
+  index: -1
+雪_082
+  rotate: true
+  xy: 2, 541
+  size: 367, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_083
+  rotate: true
+  xy: 2, 541
+  size: 367, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_084
+  rotate: true
+  xy: 2, 541
+  size: 367, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_085
+  rotate: true
+  xy: 504, 539
+  size: 367, 499
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_086
+  rotate: true
+  xy: 504, 539
+  size: 367, 499
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_102
+  rotate: true
+  xy: 2, 1278
+  size: 364, 498
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_103
+  rotate: true
+  xy: 502, 1278
+  size: 364, 498
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_104
+  rotate: true
+  xy: 2, 1644
+  size: 363, 493
+  orig: 375, 500
+  offset: 0, 7
+  index: -1
+雪_105
+  rotate: true
+  xy: 2, 1644
+  size: 363, 493
+  orig: 375, 500
+  offset: 0, 7
+  index: -1
+雪_106
+  rotate: true
+  xy: 497, 1644
+  size: 363, 493
+  orig: 375, 500
+  offset: 0, 7
+  index: -1
+雪_107
+  rotate: true
+  xy: 992, 1644
+  size: 363, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_108
+  rotate: true
+  xy: 1494, 1644
+  size: 363, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_109
+  rotate: true
+  xy: 2, 910
+  size: 366, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_110
+  rotate: true
+  xy: 2, 910
+  size: 366, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_111
+  rotate: true
+  xy: 504, 908
+  size: 366, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_112
+  rotate: true
+  xy: 2, 170
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_113
+  rotate: true
+  xy: 2, 170
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_114
+  rotate: true
+  xy: 1005, 537
+  size: 368, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_115
+  rotate: true
+  xy: 1507, 537
+  size: 368, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_116
+  rotate: true
+  xy: 1507, 537
+  size: 368, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_117
+  rotate: true
+  xy: 1003, 166
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_118
+  rotate: true
+  xy: 1003, 166
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_119
+  rotate: true
+  xy: 1505, 166
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+
+sp_snow2.png
+size: 2012,2012
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+雪_000
+  rotate: true
+  xy: 2, 516
+  size: 373, 492
+  orig: 375, 500
+  offset: 0, 8
+  index: -1
+雪_001
+  rotate: true
+  xy: 2, 516
+  size: 373, 492
+  orig: 375, 500
+  offset: 0, 8
+  index: -1
+雪_002
+  rotate: true
+  xy: 2, 516
+  size: 373, 492
+  orig: 375, 500
+  offset: 0, 8
+  index: -1
+雪_003
+  rotate: true
+  xy: 496, 515
+  size: 373, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_004
+  rotate: true
+  xy: 496, 515
+  size: 373, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_005
+  rotate: true
+  xy: 2, 1265
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_006
+  rotate: true
+  xy: 504, 1264
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_007
+  rotate: true
+  xy: 504, 1264
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_008
+  rotate: true
+  xy: 1006, 1637
+  size: 371, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_009
+  rotate: true
+  xy: 1006, 1637
+  size: 371, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_010
+  rotate: true
+  xy: 504, 1638
+  size: 370, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_011
+  rotate: true
+  xy: 504, 1638
+  size: 370, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_012
+  rotate: true
+  xy: 504, 1638
+  size: 370, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_013
+  rotate: true
+  xy: 998, 514
+  size: 373, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_014
+  rotate: true
+  xy: 998, 514
+  size: 373, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_040
+  rotate: true
+  xy: 1006, 1263
+  size: 372, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_041
+  rotate: true
+  xy: 1006, 1263
+  size: 372, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_042
+  rotate: true
+  xy: 1508, 1263
+  size: 372, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_043
+  rotate: true
+  xy: 1500, 514
+  size: 373, 497
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_044
+  rotate: true
+  xy: 1500, 514
+  size: 373, 497
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_045
+  rotate: true
+  xy: 2, 140
+  size: 373, 496
+  orig: 375, 500
+  offset: 0, 2
+  index: -1
+雪_046
+  rotate: true
+  xy: 500, 140
+  size: 373, 496
+  orig: 375, 500
+  offset: 0, 2
+  index: -1
+雪_047
+  rotate: true
+  xy: 500, 140
+  size: 373, 496
+  orig: 375, 500
+  offset: 0, 2
+  index: -1
+雪_048
+  rotate: true
+  xy: 998, 139
+  size: 373, 495
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_049
+  rotate: true
+  xy: 1495, 139
+  size: 373, 494
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_050
+  rotate: true
+  xy: 2, 891
+  size: 372, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_051
+  rotate: true
+  xy: 2, 891
+  size: 372, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_052
+  rotate: true
+  xy: 503, 890
+  size: 372, 497
+  orig: 375, 500
+  offset: 0, 3
+  index: -1
+雪_053
+  rotate: true
+  xy: 503, 890
+  size: 372, 497
+  orig: 375, 500
+  offset: 0, 3
+  index: -1
+雪_054
+  rotate: true
+  xy: 503, 890
+  size: 372, 497
+  orig: 375, 500
+  offset: 0, 3
+  index: -1
+雪_055
+  rotate: true
+  xy: 1508, 1637
+  size: 371, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_056
+  rotate: true
+  xy: 1508, 1637
+  size: 371, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_057
+  rotate: true
+  xy: 1002, 889
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_058
+  rotate: true
+  xy: 1002, 889
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_059
+  rotate: true
+  xy: 1002, 889
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_060
+  rotate: true
+  xy: 1504, 889
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_061
+  rotate: true
+  xy: 1504, 889
+  size: 372, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_120
+  rotate: true
+  xy: 2, 1639
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_121
+  rotate: true
+  xy: 2, 1639
+  size: 369, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+
+sp_snow3.png
+size: 2008,2008
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+雪_015
+  rotate: true
+  xy: 1508, 876
+  size: 375, 495
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_016
+  rotate: true
+  xy: 2, 500
+  size: 375, 495
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_017
+  rotate: true
+  xy: 2, 500
+  size: 375, 495
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_018
+  rotate: true
+  xy: 503, 1629
+  size: 374, 499
+  orig: 375, 500
+  offset: 1, 1
+  index: -1
+雪_019
+  rotate: true
+  xy: 1004, 1629
+  size: 374, 499
+  orig: 375, 500
+  offset: 1, 1
+  index: -1
+雪_020
+  rotate: true
+  xy: 499, 500
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_021
+  rotate: true
+  xy: 499, 500
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_022
+  rotate: true
+  xy: 499, 500
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_023
+  rotate: true
+  xy: 1001, 500
+  size: 375, 494
+  orig: 375, 500
+  offset: 0, 6
+  index: -1
+雪_024
+  rotate: true
+  xy: 1001, 500
+  size: 375, 494
+  orig: 375, 500
+  offset: 0, 6
+  index: -1
+雪_025
+  rotate: true
+  xy: 1497, 499
+  size: 375, 497
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_026
+  rotate: true
+  xy: 2, 123
+  size: 375, 497
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_027
+  rotate: true
+  xy: 2, 123
+  size: 375, 497
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_028
+  rotate: true
+  xy: 501, 123
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_029
+  rotate: true
+  xy: 1003, 122
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_030
+  rotate: true
+  xy: 1505, 1629
+  size: 374, 497
+  orig: 375, 500
+  offset: 0, 3
+  index: -1
+雪_031
+  rotate: true
+  xy: 1505, 1629
+  size: 374, 497
+  orig: 375, 500
+  offset: 0, 3
+  index: -1
+雪_032
+  rotate: true
+  xy: 1505, 1629
+  size: 374, 497
+  orig: 375, 500
+  offset: 0, 3
+  index: -1
+雪_062
+  rotate: true
+  xy: 2, 1630
+  size: 373, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_063
+  rotate: true
+  xy: 2, 1630
+  size: 373, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_064
+  rotate: true
+  xy: 2, 1630
+  size: 373, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_065
+  rotate: true
+  xy: 494, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_066
+  rotate: true
+  xy: 494, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_067
+  rotate: true
+  xy: 1505, 122
+  size: 375, 498
+  orig: 375, 500
+  offset: 0, 2
+  index: -1
+雪_068
+  rotate: true
+  xy: 1505, 122
+  size: 375, 498
+  orig: 375, 500
+  offset: 0, 2
+  index: -1
+雪_069
+  rotate: true
+  xy: 1505, 122
+  size: 375, 498
+  orig: 375, 500
+  offset: 0, 2
+  index: -1
+雪_075
+  rotate: true
+  xy: 996, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_076
+  rotate: true
+  xy: 996, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_077
+  rotate: true
+  xy: 1498, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_078
+  rotate: true
+  xy: 1498, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_079
+  rotate: true
+  xy: 1498, 1253
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_080
+  rotate: true
+  xy: 2, 877
+  size: 374, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_081
+  rotate: true
+  xy: 2, 877
+  size: 374, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_100
+  rotate: true
+  xy: 504, 877
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_101
+  rotate: true
+  xy: 1006, 877
+  size: 374, 500
+  orig: 375, 500
+  offset: 1, 0
+  index: -1
+雪_124
+  rotate: true
+  xy: 2, 1253
+  size: 375, 490
+  orig: 375, 500
+  offset: 0, 7
+  index: -1
+
+sp_snow4.png
+size: 1508,1508
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+雪_070
+  rotate: true
+  xy: 2, 1131
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_071
+  rotate: true
+  xy: 2, 1131
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_072
+  rotate: true
+  xy: 504, 1131
+  size: 375, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_073
+  rotate: true
+  xy: 504, 1131
+  size: 375, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_074
+  rotate: true
+  xy: 504, 1131
+  size: 375, 499
+  orig: 375, 500
+  offset: 0, 1
+  index: -1
+雪_087
+  rotate: true
+  xy: 1005, 1131
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_088
+  rotate: true
+  xy: 1005, 1131
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_089
+  rotate: true
+  xy: 1005, 1131
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_090
+  rotate: true
+  xy: 2, 754
+  size: 375, 499
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_091
+  rotate: true
+  xy: 2, 754
+  size: 375, 499
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_092
+  rotate: true
+  xy: 503, 754
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_093
+  rotate: true
+  xy: 503, 754
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_094
+  rotate: true
+  xy: 503, 754
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_095
+  rotate: true
+  xy: 1005, 754
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_096
+  rotate: true
+  xy: 1005, 754
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_097
+  rotate: true
+  xy: 2, 377
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_098
+  rotate: true
+  xy: 2, 377
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_099
+  rotate: true
+  xy: 2, 377
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_122
+  rotate: true
+  xy: 504, 377
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1
+雪_123
+  rotate: true
+  xy: 1006, 377
+  size: 375, 500
+  orig: 375, 500
+  offset: 0, 0
+  index: -1

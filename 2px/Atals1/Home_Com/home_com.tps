@@ -76,7 +76,7 @@
             <key>sizeConstraints</key>
             <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
             <key>forceSquared</key>
-            <true/>
+            <false/>
             <key>forceWordAligned</key>
             <false/>
             <key>maxRects</key>
@@ -149,7 +149,6 @@
             <filename>imgs/Common</filename>
             <filename>imgs/Help</filename>
             <filename>imgs/Home</filename>
-            <filename>imgs/Nan</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

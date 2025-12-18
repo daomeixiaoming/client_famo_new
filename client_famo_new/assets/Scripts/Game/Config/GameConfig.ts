@@ -50,22 +50,13 @@ export const Atals1Cfg = {
   Rank: "Rank",
 };
 
-// 散图
-export const GuiCfg = {
-  login_bg: "login_bg",
-  home_bg: "Bg/home_bg",
-  home_bgGunag_1: "Bg/home_bgGunag_1",
-  nan_bg: "Bg/nan_bg",
-  end_bg1: "End/end_bg1",
-  end_bg2: "End/end_bg2",
-  shop_bg: "Shop/shop_bg",
-  shop_bg2: "Shop/shop_bg2",
-};
-
 // AB包名
 export const AbNames = {
   Gui_Login: "Gui_Login",
   Gui_Home: "Gui_Home",
+
+  /** 散图 */
+  Gui: "Gui",
 
   Atals_Home: "Atals_Home",
   Atals1: "Atals1",

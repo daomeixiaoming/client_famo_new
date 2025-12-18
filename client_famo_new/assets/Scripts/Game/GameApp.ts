@@ -249,12 +249,12 @@ export default class GameApp extends cc.Component {
     this.clickAni.active = true;
     this.clickAni.setPosition(udata);
     let spAni = this.clickAni.getComponent(sp.Skeleton);
-    ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_click, sp.SkeletonData).then((res: sp.SkeletonData) => {
-      if (res && spAni) {
-        spAni.skeletonData = res;
-        spAni.setAnimation(0, "animation", false);
-      }
-    })
+    // ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_click, sp.SkeletonData).then((res: sp.SkeletonData) => {
+    //   if (res && spAni) {
+    //     spAni.skeletonData = res;
+    //     spAni.setAnimation(0, "animation", false);
+    //   }
+    // })
   }
 
   // Boss死亡弹出的宝箱

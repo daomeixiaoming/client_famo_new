@@ -3,9 +3,10 @@ import UIBase from "../../../../Framework/Managers/UIBase";
 import UIMgr from "../../../../Framework/Managers/UIMgr";
 import CocosUtils from "../../../../Framework/Utils/CocosUtils";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
 import { AbNames, Lngs, UICfg } from "../../../Config/GameConfig";
-import { ResCfg } from "../../../Config/ResConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 import NativeMgr from "../../../Data/NativeMgr";
 import GameApp from "../../../GameApp";
 
@@ -34,40 +35,21 @@ export default class Notice_Ctrl extends UIBase {
     }
 
     private initUI(): void {
-        this.agreeTog = this.ViewComponent(
-            "node/bg/sp_bg/tog1",
-            cc.Toggle
-        ) as cc.Toggle;
-        this.todayTog = this.ViewComponent(
-            "node/bg/sp_bg/tog1",
-            cc.Toggle
-        ) as cc.Toggle;
-        this.labContent = this.ViewComponent(
-            "node/bg/sp_bg/lab",
-            cc.Label
-        ) as cc.Label;
-        this.lab1 = this.ViewComponent(
-            "node/bg/sp_bg/tog1/lab",
-            cc.Label
-        ) as cc.Label;
-        this.lab2 = this.ViewComponent(
-            "node/bg/sp_bg/tog1/lab2",
-            cc.Label
-        ) as cc.Label;
-        this.lab3 = this.ViewComponent(
-            "node/bg/sp_bg/tog2/lab",
-            cc.Label
-        ) as cc.Label;
+        let spBg = this.ViewComponent("node/bg/sp_bg", cc.Sprite) as cc.Sprite;
+        GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.rewardPrice_bg, spBg);
+
+        this.agreeTog = this.ViewComponent("node/bg/sp_bg/tog1", cc.Toggle) as cc.Toggle;
+        this.todayTog = this.ViewComponent("node/bg/sp_bg/tog1", cc.Toggle) as cc.Toggle;
+        this.labContent = this.ViewComponent("node/bg/sp_bg/lab", cc.Label) as cc.Label;
+        this.lab1 = this.ViewComponent("node/bg/sp_bg/tog1/lab", cc.Label) as cc.Label;
+        this.lab2 = this.ViewComponent("node/bg/sp_bg/tog1/lab2", cc.Label) as cc.Label;
+        this.lab3 = this.ViewComponent("node/bg/sp_bg/tog2/lab", cc.Label) as cc.Label;
 
         this.bgNode = this.view["node"] as cc.Node;
 
         this.AddButtonListener("node/bg/sp_bg/btn2", this, this.onBtnAgreeClick);
         this.AddButtonListener("node/bg/sp_bg/btn1", this, this.onBtnNotAgree);
-        this.AddButtonListener(
-            "node/bg/sp_bg/tog1/lab2",
-            this,
-            this.onBtnShowAgree
-        );
+        this.AddButtonListener("node/bg/sp_bg/tog1/lab2", this, this.onBtnShowAgree);
     }
 
     private initData(): void {

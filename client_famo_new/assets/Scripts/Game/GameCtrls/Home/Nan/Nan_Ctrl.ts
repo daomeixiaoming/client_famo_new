@@ -1,7 +1,10 @@
 import EventMgr from "../../../../Framework/Managers/EventMgr";
 import UIBase from "../../../../Framework/Managers/UIBase";
 import DebugUtils from "../../../../Framework/Utils/DebugUtils";
+import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { EventKey } from "../../../Config/EventCfg";
+import { AbNames } from "../../../Config/GameConfig";
+import { GuiCfg } from "../../../Config/ResConfig";
 
 const { ccclass, property } = cc._decorator;
 /**
@@ -20,6 +23,9 @@ export default class Nan_Ctrl extends UIBase {
     }
 
     private initUI(): void {
+        let spBg = this.ViewComponent("node/bg/sp_bg/bg", cc.Sprite) as cc.Sprite;
+        GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.nan_bg, spBg);
+
         this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
         this.AddButtonListener("node/bg/sp_bg/btn_buy", this, this.onBtnBuyClick);
     }

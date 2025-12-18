@@ -15,11 +15,9 @@ export const ResCfg = {
     //排行榜
     Rank: "Rank/Rank",
     RankItem1: "Rank/RankItem1",
-    RankItem2: "Rank/RankItem2",
-    RankDetial: "Rank/RankDetial", //伤害详情
     RankPage1: "Rank/RankPage1",
     RankPage2: "Rank/RankPage2",
-    RankPage3: "Rank/RankPage3",
+
     //个人记录
     Record: "Record/Record",
     RecordItem: "Record/RecordItem",
@@ -58,10 +56,6 @@ export const ResCfg = {
 export const SpineCfg = {
   /** boss动画 */
   sp_boss: "sp_boss1/sp_boss",
-  /** 底座光 */
-  sp_light: "sp_light/sp_light",
-  /** 血条动画 */
-  sp_hp: "sp_hp/sp_hp",
 
   /** 500攻击 */
   sp_atk500: "sp_atk500/sp_atk500",
@@ -70,8 +64,34 @@ export const SpineCfg = {
   /** 5000攻击 */
   sp_atk5000: "sp_atk5000/sp_atk5000",
 
-  /** 点击动销 */
-  sp_click: "sp_click/sp_click",
+  /** 落雪动画 */
+  sp_snow: "sp_snow/sp_snow",
+  /** 光圈动画 */
+  sp_circle: "sp_circle/sp_circle",
 }
 
 
+
+/** 散图*/
+export const GuiCfg = {
+  rewardPrice_bg: "Bg/rewardPrice_bg",
+  home_bg: "Bg/home_bg",
+  game_boss: "Bg/game_boss",
+  /** 兑换商城 */
+  shop_bg2: "Shop/shop_bg2",
+  shop_bg: "Shop/shop_bg",
+  /** 帮助 */
+  help_bg: "Bg/help_bg",
+  /** 中奖记录 */
+  record_bg: "Bg/record_bg",
+  /** 金币不足 */
+  nan_bg: "Bg/nan_bg",
+
+  login_bg: "login_bg",
+
+  home_bgGunag_1: "Bg/home_bgGunag_1",
+  /** 结算 */
+  end_bg0: "End/end_bg0",
+  end_bg2: "End/end_bg2",
+
+};

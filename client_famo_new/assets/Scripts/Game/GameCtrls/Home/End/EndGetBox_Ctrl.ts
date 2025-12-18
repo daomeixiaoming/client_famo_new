@@ -5,7 +5,7 @@ import DebugUtils from "../../../../Framework/Utils/DebugUtils";
 import GameUtils from "../../../../Framework/Utils/GameUtils";
 import { AbNames, Lngs, UICfg } from "../../../Config/GameConfig";
 import { BoxType, GiftItem } from "../../../Config/MsgCfg";
-import { ResCfg } from "../../../Config/ResConfig";
+import { GuiCfg, ResCfg } from "../../../Config/ResConfig";
 import EndGetBoxItem_Ctrl from "./EndGetBoxItem_Ctrl";
 
 const { ccclass, property } = cc._decorator;
@@ -32,16 +32,13 @@ export default class EndGetBox_Ctrl extends UIBase {
   }
 
   private async initUI() {
+    let spBg = this.ViewComponent("node/bg/sp_bg", cc.Sprite) as cc.Sprite;
+    GameUtils.SetSpTexture(AbNames.Gui, GuiCfg.end_bg0, spBg);
+
     this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
 
-    this.lab_des = this.ViewComponent(
-      "node/bg/sp_bg/labs/lab_des",
-      cc.Label
-    ) as cc.Label;
-    this.lab_num = this.ViewComponent(
-      "node/bg/sp_bg/labs/lab_num",
-      cc.Label
-    ) as cc.Label;
+    this.lab_des = this.ViewComponent("node/bg/sp_bg/labs/lab_des", cc.Label) as cc.Label;
+    this.lab_num = this.ViewComponent("node/bg/sp_bg/labs/lab_num", cc.Label) as cc.Label;
     this.lab_num.string = "0";
 
     // 只有一个奖品时候的节点

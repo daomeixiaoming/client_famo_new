@@ -42,7 +42,6 @@ export const EventKey = {
   UI_Loading: "UI_Loading", //显示加载进度
   UI_LoadingEnd: "UI_LoadingEnd", //显示加载进度
   UI_ClickAni: "UI_ClickAni", //点击事件
-  UI_RankShowDetial: "UI_RankShowDetial", //排行榜显示伤害详情
   UI_RankNanData: "UI_RankNanData", //排行无数据
   UI_EnterGame: "UI_EnterGame", //进入游戏
   UI_UpadteBtnStatus: "UI_UpadteBtnStatus", //显示登录
