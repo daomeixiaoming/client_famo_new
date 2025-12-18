@@ -456,7 +456,7 @@ export default class Home_Ctrl extends UIBase {
       if (item) {
         let name = item.nickname;
         let num = item.reward || 0;
-        let des = `<color=#ffffff>${Lngs.MsgPop1} </c><color=#DA6262>${name}</color><color=#ffffff> ${Lngs.MsgPop2}${num}${Lngs.MsgPop3}</c>`;
+        let des = `<color=#ffffff>${Lngs.MsgPop1} </c><color=#ffffff>${name}</color><color=#ffffff> ${Lngs.MsgPop2}${num}${Lngs.MsgPop3}</c>`;
         temp.getComponent(cc.RichText).string = des;
         idx++;
         idx = idx % 3;
@@ -614,7 +614,10 @@ export default class Home_Ctrl extends UIBase {
           .by(0.75, { position: cc.v3(0, offsetH, 0) })
           .delay(0.75)
           .to(0.5, { opacity: 0 })
-          .removeSelf()
+          .call(() => {
+            NodePoolMgr.Instance.PutNodeInPool(AbNames.Prefabs, ResCfg.Prefabs.addBetItem, item2);
+          })
+          // .removeSelf()
           .start();
       }
     }

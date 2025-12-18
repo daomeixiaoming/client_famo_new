@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "QNQ8LXg9kFbf8DETvqa9pHtZPCw",
+	"hash": "WeS/m/b7jNthwKTAPzeaFOLcnm0",
 	"spine": "3.8.75",
 	"x": -182,
 	"y": -182,
@@ -31,9 +31,9 @@
 			"最新出奖英雄光圈": {
 				"attachment": [
 					{ "name": "最新出奖英雄光圈" },
-					{ "time": 0.6667, "name": "最新出奖英雄光圈" },
-					{ "time": 1.6667, "name": "最新出奖英雄光圈" },
-					{ "time": 2.5, "name": "最新出奖英雄光圈" }
+					{ "time": 1, "name": "最新出奖英雄光圈" },
+					{ "time": 2, "name": "最新出奖英雄光圈" },
+					{ "time": 3, "name": "最新出奖英雄光圈" }
 				]
 			}
 		},
@@ -41,10 +41,10 @@
 			"root": {
 				"rotate": [
 					{},
-					{ "time": 0.6667, "angle": -90 },
-					{ "time": 1.6667, "angle": 180 },
-					{ "time": 2.5, "angle": 90 },
-					{ "time": 3.3333 }
+					{ "time": 1, "angle": -90 },
+					{ "time": 2, "angle": 180 },
+					{ "time": 3, "angle": 90 },
+					{ "time": 3.8333 }
 				]
 			}
 		}

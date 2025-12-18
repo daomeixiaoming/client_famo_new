@@ -18,6 +18,12 @@ export default class HomeMenu_Ctrl extends UIBase {
     start() {
         // 更新按钮状态，防止狂点
         EventMgr.Instance.Emit(EventKey.UI_UpadteBtnStatus, "");
+
+        let bg = this.view["node/bg/spMenuBg"] as cc.Node;
+        bg.setScale(0, 1);
+        cc.tween(bg)
+            .to(0.05, { scaleX: 1 })
+            .start()
     }
 
     private initUI() {

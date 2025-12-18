@@ -90,11 +90,11 @@ export default class UIBase extends cc.Component {
         node.active = false;
         cc.Tween.stopAllByTarget(node);
         cc.tween(node)
-            .to(0, { scale: 0.1 })
+            .to(0, { scale: 0.1, opacity: 1 })
             .call(() => {
                 node.active = true;
             })
-            .to(0.08, { scale: 1.1 })
+            .to(0.08, { scale: 1.1, opacity: 255 })
             .to(0.1, { scale: 0.9 })
             .to(0.1, { scale: 1 }).call(
                 () => {

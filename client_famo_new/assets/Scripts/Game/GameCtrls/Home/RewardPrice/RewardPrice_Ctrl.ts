@@ -40,11 +40,7 @@ export default class RewardPrice_Ctrl extends UIBase {
   }
 
   protected onDestroy(): void {
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_GetBoxConfig,
-      this,
-      this.onMsgGetBoxCfgRes
-    );
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_GetBoxConfig, this, this.onMsgGetBoxCfgRes);
   }
 
   private initUI() {
