@@ -20,11 +20,11 @@
             <key>rewardprice_9line.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{680,58},{2,50}}</string>
+                <string>{{732,2},{2,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{2,50}}</string>
                 <key>sourceSize</key>
@@ -69,6 +69,58 @@
                 <key>sourceSize</key>
                 <string>{698,166}</string>
             </dict>
+            <key>rewardprice_txt1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{709,170},{109,27}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{109,27}}</string>
+                <key>sourceSize</key>
+                <string>{109,27}</string>
+            </dict>
+            <key>rewardprice_txt2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{680,58},{111,27}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{111,27}}</string>
+                <key>sourceSize</key>
+                <string>{111,27}</string>
+            </dict>
+            <key>rewardprice_txt3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{680,171},{108,27}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{108,27}}</string>
+                <key>sourceSize</key>
+                <string>{108,27}</string>
+            </dict>
+            <key>rewardprice_txt4.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{709,58},{110,27}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{110,27}}</string>
+                <key>sourceSize</key>
+                <string>{110,27}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -77,9 +129,9 @@
             <key>realTextureFileName</key>
             <string>RewardPrice.png</string>
             <key>size</key>
-            <string>{732,308}</string>
+            <string>{738,308}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b38d0f879f33c59385334f5acd3e931f$</string>
+            <string>$TexturePacker:SmartUpdate:2835e20d846df078bb5df17c31373bc7$</string>
             <key>textureFileName</key>
             <string>RewardPrice.png</string>
         </dict>

@@ -7,19 +7,29 @@ export const EventKey = {
   Start_EnterGame: "Start_EnterGame", //通知开始游戏初始化
 
   // http 消息
-  Http_Msg_ShopBuyRes: "Http_Msg_ShopBuyRes", //购买宝箱返回
+  /** 购买宝箱返回 */
+  Http_Msg_ShopBuyRes: "Http_Msg_ShopBuyRes",
   Http_Res_GetPlayerInfo: "Http_Res_GetPlayerInfo",
-  Http_Res_GetShopList: "Http_Res_GetShopList", //获取伐魔商城列表
-  Http_Res_GetShopMoneyList: "Http_Res_GetShopMoneyList", //获取破魔券商城列表
-  Http_Res_EnterHome: "Http_Res_EnterHome", //请求 enterHome消息
-  Http_Res_Atk: "Http_Res_Atk", //请求 攻击消息返回
-  Http_Res_OpenBoxRes: "Http_Res_OpenBoxRes", //开宝箱返回
-  Http_Res_RankPage3: "Http_Res_RankPage3", //伤害版数据
+  /** 获取伐魔商城列表 */
+  Http_Res_GetShopList: "Http_Res_GetShopList",
+  /** 获取破魔券商城列表 */
+  Http_Res_GetShopMoneyList: "Http_Res_GetShopMoneyList",
+  /** 请求 enterHome消息  场景消息返回*/
+  Http_Res_EnterHome: "Http_Res_EnterHome",
+  /** 请求 攻击消息返回 */
+  Http_Res_Atk: "Http_Res_Atk", //
+  /** 开宝箱返回 */
+  Http_Res_OpenBoxRes: "Http_Res_OpenBoxRes",
+  /** 伤害版数据 */
+  Http_Res_RankPage3: "Http_Res_RankPage3",
   /** 排行榜昨日今日数据 */
   Http_Res_RankPage1: "Http_Res_RankPage1",
-  Http_Res_GetRankDetial: "Http_Res_GetRankDetial", //获取讨伐记录榜
-  Http_Res_GetRecordList: "Http_Res_GetRecordList", //获取中奖记录
-  Http_Res_GetBoxConfig: "Http_Res_GetBoxConfig", //宝箱配置
+  /** 获取讨伐记录榜 */
+  Http_Res_GetRankDetial: "Http_Res_GetRankDetial",
+  /** 获取中奖记录 */
+  Http_Res_GetRecordList: "Http_Res_GetRecordList",
+  /** 宝箱配置 */
+  Http_Res_GetBoxConfig: "Http_Res_GetBoxConfig",
 
   //ws 长链接消息
   WS_UpdateBoss: "WS_UpdateBoss", //更新Boss消息

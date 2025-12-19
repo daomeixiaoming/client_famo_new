@@ -83,25 +83,23 @@ export default class Record_Ctrl extends UIBase {
   }
 
   // 请求记录数据返回
-  private async onGetRecordListRes(
-    uname: string,
-    udata: PageResultRewardHistoryItem
-  ) {
+  private onGetRecordListRes(uname: string, udata: PageResultRewardHistoryItem) {
     if (udata) {
       let list = udata.list;
       // list.length = 0; //测试
-
       //无数据节点
       if (this.startPage === 1 && list.length <= 0) {
         this.nanNode.destroyAllChildren();
-        let preNan = (await ResMgrAsync.Instance.IE_GetAsset(
+        ResMgrAsync.Instance.IE_GetAsset(
           AbNames.Prefabs,
           ResCfg.Prefabs.NanItem,
           cc.Prefab
-        )) as cc.Prefab;
-        let item = cc.instantiate(preNan);
-        this.nanNode.addChild(item);
-        item.getComponentInChildren(cc.Label).string = Lngs.RewardDes1;
+        ).then((res: cc.Prefab) => {
+          if (res) {
+            let item = cc.instantiate(res);
+            this.nanNode.addChild(item);
+          }
+        })
         return;
       }
 

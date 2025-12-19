@@ -187,11 +187,14 @@ export default class GameApp extends cc.Component {
    * 播放音效
    * @param audioPath
    */
-  public async playEffectAudio(audioPath: string) {
-    let audioClip = (await ResMgrAsync.Instance.IE_GetAsset(AbNames.Sounds, audioPath, cc.AudioClip)) as cc.AudioClip;
-    if (audioClip) {
-      SoundMgr.Instance.playSound(audioClip);
-    }
+  public playEffectAudio(audioPath: string) {
+    ResMgrAsync.Instance.IE_GetAsset(AbNames.Sounds, audioPath, cc.AudioClip).then((res: cc.AudioClip) => {
+      if (res) {
+        SoundMgr.Instance.playSound(res);
+      }
+    }).catch(() => {
+      console.error("playEffectAudio error: " + audioPath);
+    });
   }
 
   /**

@@ -20,9 +20,6 @@ import GameLogic from "../../GameLogic";
 import EndGetBox2_Ctrl from "./End/EndGetBox2_Ctrl";
 import EndGetBox_Ctrl from "./End/EndGetBox_Ctrl";
 import EndOpen_Ctrl from "./End/EndOpen_Ctrl";
-import Help_Ctrl from "./Help/Help_Ctrl";
-import HomeMenu_Ctrl from "./HomeMenu_Ctrl";
-import Rank_Ctrl from "./Rank/Rank_Ctrl";
 
 const { ccclass, property } = cc._decorator;
 
@@ -62,6 +59,11 @@ export default class Home_Ctrl extends UIBase {
   isAddHp = false;
   isAddLight = false;
 
+  /** 是否播放动画 */
+  isShowBossAni = true;
+  /** 是否能播放Boss的动画 */
+  isCanPlayBossAni = true;
+
   onLoad() {
     super.onLoad();
     this.initUI();
@@ -70,15 +72,11 @@ export default class Home_Ctrl extends UIBase {
   }
 
   protected async start() {
-    DebugUtils.Log(
-      "===================Home_Ctrl.start 开始连接网络========================="
-    );
+    DebugUtils.Log("===================Home_Ctrl.start 开始连接网络=========================");
 
     // 初始化跑马灯
     this.setTipAni();
-    DebugUtils.Log(
-      "===================Home_Ctrl.start 开始连接网络1========================="
-    );
+    DebugUtils.Log("===================Home_Ctrl.start 开始连接网络1=========================");
 
     // 初始化网络
     let url = NetCfg.wss + `?Authorization=${NetCfg.token}&bid=demon-slaying`;
@@ -91,13 +89,15 @@ export default class Home_Ctrl extends UIBase {
   }
 
   protected update(dt: number): void {
-
+    if (this.isCanPlayBossAni) {
+      if (this.isShowBossAni) {
+        this.createBoss();
+      }
+    }
   }
 
   protected onDestroy(): void {
-    DebugUtils.Log(
-      "===================Home_Ctrl.onDestroy 关闭网络========================="
-    );
+    DebugUtils.Log("===================Home_Ctrl.onDestroy 关闭网络=========================");
 
     // 关闭网络
     NetMgr.Instance.CloseSocket();
@@ -108,7 +108,6 @@ export default class Home_Ctrl extends UIBase {
 
     // 清理节点池
     NodePoolMgr.Instance.ClearAllNodeInPool(AbNames.Prefabs, ResCfg.Prefabs.addBetItem);
-
     this.clearFHCallBack();
   }
 
@@ -133,16 +132,10 @@ export default class Home_Ctrl extends UIBase {
     // 血条显示
     this.lab_hp = this.ViewComponent("node/home_hp/lab", cc.Label) as cc.Label;
     // 血条滑动条
-    this.pro_hpbar = this.ViewComponent(
-      "node/home_hp/barBg/bar",
-      cc.Sprite
-    ) as cc.Sprite;
+    this.pro_hpbar = this.ViewComponent("node/home_hp/barBg/bar", cc.Sprite) as cc.Sprite;
 
     // 声音的组件
-    this.sp_voice = this.ViewComponent(
-      "node/btn_voice/sp_voice",
-      cc.Sprite
-    ) as cc.Sprite;
+    this.sp_voice = this.ViewComponent("node/btn_voice/sp_voice", cc.Sprite) as cc.Sprite;
     // 破魔券
     this.lb_pms = this.ViewComponent("node/item_bg/lab", cc.Label) as cc.Label;
 
@@ -153,10 +146,7 @@ export default class Home_Ctrl extends UIBase {
     this.hpAniNode = this.view["node/home_hp/aniNode/hpAniNode"] as cc.Node;
     let bg = this.view["node/home_bg"] as cc.Node;
     bg.active = true;
-    this.hpPro = this.ViewComponent(
-      "node/home_hp/ProgressBar",
-      cc.ProgressBar
-    ) as cc.ProgressBar;
+    this.hpPro = this.ViewComponent("node/home_hp/ProgressBar", cc.ProgressBar) as cc.ProgressBar;
 
     // 下注返回收到伏魔券的区域
     this.addBetArea = this.view["node/add_score"] as cc.Node;
@@ -176,7 +166,6 @@ export default class Home_Ctrl extends UIBase {
     this.boss.active = true;
 
     // 创建Boss动画
-    this.createBoss();
     this.createSnow();
     this.createCircle();
 
@@ -208,12 +197,34 @@ export default class Home_Ctrl extends UIBase {
 
   /** 播放Boss动画 */
   private createBoss() {
+    this.isShowBossAni = !this.isShowBossAni;
     // Boss节点
     let spAni = this.ViewComponent("node/svgas/svga_boss/AniBoss", sp.Skeleton) as sp.Skeleton;
     ResMgrAsync.Instance.IE_GetAsset(AbNames.Spine, SpineCfg.sp_boss, sp.SkeletonData).then((res: sp.SkeletonData) => {
       if (res && spAni) {
+        GameApp.Instance.playEffectAudio(ResCfg.VoiceCfg.boss_call);
         spAni.skeletonData = res;
-        spAni.setAnimation(0, "animation", true);
+        spAni.setAnimation(0, "animation", false);
+
+        // 开始播放动画
+        let temp = this.view["node/svgas/svga_boss/circle"] as cc.Node;
+        temp.opacity = 0;
+        cc.Tween.stopAllByTarget(temp);
+        cc.tween(temp)
+          .to(1.5, { opacity: 255 })
+          .start()
+
+        // 动画播放结束事件
+        spAni.setEndListener(() => {
+          console.log("--------------动画播放结束事件===============");
+          cc.Tween.stopAllByTarget(temp);
+          cc.tween(temp)
+            .to(1.5, { opacity: 0 })
+            .call(() => {
+              this.isShowBossAni = !this.isShowBossAni;
+            })
+            .start()
+        })
       }
     })
   }
@@ -225,6 +236,7 @@ export default class Home_Ctrl extends UIBase {
       if (res && spAni) {
         spAni.skeletonData = res;
         spAni.setAnimation(0, "animation", true);
+
       }
     })
   }
@@ -260,7 +272,7 @@ export default class Home_Ctrl extends UIBase {
         break;
     }
 
-    //播放音效
+    //播放攻击音效
     if (audioPath) {
       GameApp.Instance.playEffectAudio(audioPath);
     }
@@ -272,6 +284,12 @@ export default class Home_Ctrl extends UIBase {
         if (res && spAni) {
           spAni.skeletonData = res;
           spAni.setAnimation(0, "animation", false);
+
+          // 监听动画播放结束事件
+          spAni.setEndListener(() => {
+            DebugUtils.Log("===================攻击动画结束====================");
+            this.isCanPlayBossAni = !this.isCanPlayBossAni;
+          })
         }
       })
     }
@@ -301,81 +319,24 @@ export default class Home_Ctrl extends UIBase {
   }
 
   private RegisterEvent() {
-    EventMgr.Instance.AddEventListener(
-      EventKey.Http_Res_EnterHome,
-      this,
-      this.onHttpMsgEnterHomeRes
-    ); //场景消息返回
-    EventMgr.Instance.AddEventListener(
-      EventKey.Http_Res_Atk,
-      this,
-      this.onHttpMsgAtkRes
-    ); //1 攻击返回
-    EventMgr.Instance.AddEventListener(
-      EventKey.Http_Res_OpenBoxRes,
-      this,
-      this.onHttpMsgOpenBoxRes
-    ); //1
-    EventMgr.Instance.AddEventListener(
-      EventKey.WS_UpdateBoss,
-      this,
-      this.onWsEventUpdateBoss
-    ); //更新Boss信息
-    EventMgr.Instance.AddEventListener(
-      EventKey.WS_RewardBox,
-      this,
-      this.onWsEventRewardBox
-    );
-    EventMgr.Instance.AddEventListener(
-      EventKey.Update_ExorcismVoucher,
-      this,
-      this.setPMSNum
-    );
-
-    EventMgr.Instance.AddEventListener(
-      EventKey.UI_UpadteBtnStatus,
-      this,
-      this.updateBtnStatus
-    );
+    EventMgr.Instance.AddEventListener(EventKey.Http_Res_EnterHome, this, this.onHttpMsgEnterHomeRes);
+    EventMgr.Instance.AddEventListener(EventKey.Http_Res_Atk, this, this.onHttpMsgAtkRes);
+    EventMgr.Instance.AddEventListener(EventKey.Http_Res_OpenBoxRes, this, this.onHttpMsgOpenBoxRes);
+    EventMgr.Instance.AddEventListener(EventKey.WS_UpdateBoss, this, this.onWsEventUpdateBoss); //更新Boss信息
+    EventMgr.Instance.AddEventListener(EventKey.WS_RewardBox, this, this.onWsEventRewardBox);
+    EventMgr.Instance.AddEventListener(EventKey.Update_ExorcismVoucher, this, this.setPMSNum);
+    EventMgr.Instance.AddEventListener(EventKey.UI_UpadteBtnStatus, this, this.updateBtnStatus);
   }
 
   private UnRegisterEvent() {
     // DebugUtils.Log("============Home_Ctrl.UnRegisterEvent=======================");
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_EnterHome,
-      this,
-      this.onHttpMsgEnterHomeRes
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_Atk,
-      this,
-      this.onHttpMsgAtkRes
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Http_Res_OpenBoxRes,
-      this,
-      this.onHttpMsgOpenBoxRes
-    ); //1
-    EventMgr.Instance.RemoveListenner(
-      EventKey.WS_UpdateBoss,
-      this,
-      this.onWsEventUpdateBoss
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.WS_RewardBox,
-      this,
-      this.onWsEventRewardBox
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.Update_ExorcismVoucher,
-      this,
-      this.setPMSNum
-    );
-    EventMgr.Instance.RemoveListenner(
-      EventKey.UI_UpadteBtnStatus,
-      this,
-      this.updateBtnStatus
-    );
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_EnterHome, this, this.onHttpMsgEnterHomeRes);
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_Atk, this, this.onHttpMsgAtkRes);
+    EventMgr.Instance.RemoveListenner(EventKey.Http_Res_OpenBoxRes, this, this.onHttpMsgOpenBoxRes); //1
+    EventMgr.Instance.RemoveListenner(EventKey.WS_UpdateBoss, this, this.onWsEventUpdateBoss);
+    EventMgr.Instance.RemoveListenner(EventKey.WS_RewardBox, this, this.onWsEventRewardBox);
+    EventMgr.Instance.RemoveListenner(EventKey.Update_ExorcismVoucher, this, this.setPMSNum);
+    EventMgr.Instance.RemoveListenner(EventKey.UI_UpadteBtnStatus, this, this.updateBtnStatus);
   }
 
   private clearFHCallBack() {
@@ -683,6 +644,7 @@ export default class Home_Ctrl extends UIBase {
         );
         this.updateBtnsStatus(true);
       } else {
+        this.isCanPlayBossAni = false;
         GameLogic.Instance.startAtk(atkType);
       }
     } else if (this.gameStatus === GameStatus.FuHuo) {
@@ -845,17 +807,7 @@ export default class Home_Ctrl extends UIBase {
       let type = udata.type;
       let num = GameLogic.Instance.GetBoxByType(type);
       if (num !== undefined || num !== null) {
-        // DebugUtils.Log("===========onHttpMsgOpenBoxRes===========", num);
-        let audio = (await ResMgrAsync.Instance.IE_GetAsset(
-          AbNames.Sounds,
-          ResCfg.VoiceCfg.get_box,
-          cc.AudioClip
-        )) as cc.AudioClip;
-        if (audio) {
-          SoundMgr.Instance.playSound(audio);
-        } else {
-          DebugUtils.Log("======礼物音效错误======");
-        }
+        GameApp.Instance.playEffectAudio(ResCfg.VoiceCfg.get_box);
         // // 测试数据
         // udata.giftList = [
         //     {

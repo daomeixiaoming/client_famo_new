@@ -7,7 +7,7 @@
             <key>shop_close.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{299,200},{56,56}}</string>
+                <string>{{267,108},{56,56}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>shop_item_icon.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{299,258},{32,32}}</string>
+                <string>{{151,328},{32,32}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,11 +33,11 @@
             <key>shop_item_icon1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{193,338},{22,24}}</string>
+                <string>{{109,345},{22,24}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{22,24}}</string>
                 <key>sourceSize</key>
@@ -50,11 +50,24 @@
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,1},{183,70}}</string>
                 <key>sourceSize</key>
                 <string>{185,72}</string>
+            </dict>
+            <key>shop_scorebg.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{151,160},{166,46}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{1,0},{166,46}}</string>
+                <key>sourceSize</key>
+                <string>{168,46}</string>
             </dict>
             <key>shop_title.png</key>
             <dict>
@@ -72,7 +85,7 @@
             <key>shopmoney_gird_bg.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{79,232},{112,112}}</string>
+                <string>{{199,166},{112,112}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -95,40 +108,14 @@
                 <key>sourceSize</key>
                 <string>{196,77}</string>
             </dict>
-            <key>shopmoney_gird_guang.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{267,2},{116,94}}</string>
-                <key>offset</key>
-                <string>{0,1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,6},{116,94}}</string>
-                <key>sourceSize</key>
-                <string>{116,108}</string>
-            </dict>
-            <key>shopmoney_item1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{267,120},{90,78}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{7,13},{90,78}}</string>
-                <key>sourceSize</key>
-                <string>{104,104}</string>
-            </dict>
             <key>shopmoney_item_icon.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,200},{26,28}}</string>
+                <string>{{79,345},{26,28}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{26,28}}</string>
                 <key>sourceSize</key>
@@ -137,7 +124,7 @@
             <key>shopmoney_itembg.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{193,232},{104,104}}</string>
+                <string>{{267,2},{104,104}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -168,9 +155,9 @@
             <key>realTextureFileName</key>
             <string>Shop.png</string>
             <key>size</key>
-            <string>{363,363}</string>
+            <string>{373,373}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:0b8649b3e832a278da7e36437fe53aa4$</string>
+            <string>$TexturePacker:SmartUpdate:b667771d8b53aaade3267b10cea552a3$</string>
             <key>textureFileName</key>
             <string>Shop.png</string>
         </dict>

@@ -123,7 +123,6 @@ export default class NativeMgr extends cc.Component {
     public updateGameInfo(): void {
         //更新大厅数据
         GameLogic.Instance.resetGameInfo();
-
         this.callBridge("refreshAmount", {}, (res) => {
             // DebugUtils.Log("refreshAmount res", res);
             DebugUtils.Log("============updateGameInfo.refreshAmount============", res);
@@ -133,7 +132,7 @@ export default class NativeMgr extends cc.Component {
         });
     }
 
-    // 取直播id
+    // 取直播间信息
     public getLiveRoomInfo() {
         if (!this.isBridgeReady()) {
             // DebugUtils.Log("===========getLiveRoomInfo1=============");
@@ -151,6 +150,7 @@ export default class NativeMgr extends cc.Component {
         });
     }
 
+    /** 取用户信息 */
     public getUserInfo() {
         if (!this.isBridgeReady()) {
             // DebugUtils.Log("===========getUserInfo1=============");
@@ -159,12 +159,13 @@ export default class NativeMgr extends cc.Component {
         }
         this.callBridge("getUserInfo", {}, (res: IBridgeResponse<IUserInfo>) => {
             NetCfg.token = res.data.appToken;
-            // DebugUtils.Log("===========getUserInfo2=============");
+            DebugUtils.Log("===========getUserInfo2=============");
             DebugUtils.Log("===== token:", NetCfg.token);
             EventMgr.Instance.Emit(EventKey.Native_UserInfo, "");
         });
     }
 
+    /** 判断是否是windows 开发平台 */
     public isBridgeReady() {
         let WebViewJavascriptBridge = window["WebViewJavascriptBridge"];
         if (WebViewJavascriptBridge) {

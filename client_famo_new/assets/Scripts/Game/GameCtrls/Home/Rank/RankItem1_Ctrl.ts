@@ -23,8 +23,14 @@ export default class RankItem1_Ctrl extends UIBase {
   spItem: cc.Node;
   scrollView: cc.ScrollView;
   isExit: boolean = false;
+  private _isLoaded: boolean = false;
 
   onLoad() {
+    this._applyData();
+    this._isLoaded = true;
+  }
+
+  private _applyData() {
     super.onLoad();
     this.initUI();
   }
@@ -55,6 +61,9 @@ export default class RankItem1_Ctrl extends UIBase {
 
   public setData(data: RankItem, pos: number): void {
     // DebugUtils.Log("==========setData1111============", pos);
+    if (!this._isLoaded) {
+      this._applyData();
+    }
     let rank = data.ranking;
     if (pos < 3) {
       this.sp_lv.node.active = true;

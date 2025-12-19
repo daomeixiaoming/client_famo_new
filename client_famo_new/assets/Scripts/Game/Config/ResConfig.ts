@@ -43,12 +43,16 @@ export const ResCfg = {
 
   // 音效文件
   VoiceCfg: {
-    bg_music: "bg_music", //背景音乐
-    atk_500: "atk_500", //500攻击音效
-    atk_2500: "atk_2500", //2500攻击音效
-    atk_5000: "atk_5000", //5000攻击音效
-    click: "click", //按钮点击音效
-    get_box: "get_box", //获得宝箱音效
+    /** 500攻击音效 */
+    atk_500: "atk_500",
+    /** 2500攻击音效 */
+    atk_2500: "atk_2500",
+    /** 5000攻击音效 */
+    atk_5000: "atk_5000",
+    /** 获得宝箱音效 */
+    get_box: "get_box",
+    /** 白虎叫 */
+    boss_call: "boss_call",
   },
 };
 

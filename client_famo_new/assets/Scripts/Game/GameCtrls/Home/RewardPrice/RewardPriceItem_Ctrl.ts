@@ -11,11 +11,14 @@ export default class RewardPriceItem_Ctrl extends UIBase {
   layout_r: cc.Node;
   node_l: cc.Node;
   widget_r: cc.Widget;
+  private _isLoaded: boolean = false;
   onLoad() {
     DebugUtils.Log("=============RewardPriceItem_Ctrl.onLoad==============");
+    this._applyData();
+    this._isLoaded = true;
   }
 
-  initView() {
+  private _applyData() {
     super.onLoad();
     this.initUI();
   }
@@ -41,11 +44,10 @@ export default class RewardPriceItem_Ctrl extends UIBase {
   }
 
   public setData(data: BoxConfigItem) {
-    this.initView();
-    DebugUtils.Log(
-      "=============RewardPriceItem_Ctrl.setData==============",
-      data
-    );
+    if (!this._isLoaded) {
+      this._applyData();
+    }
+    DebugUtils.Log("=============RewardPriceItem_Ctrl.setData==============", data);
     let boxName = data.boxName || "";
     if (boxName) {
       this.lab_name.string = boxName;

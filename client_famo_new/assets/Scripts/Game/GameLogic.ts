@@ -301,15 +301,15 @@ export default class GameLogic extends cc.Component {
         let v = parseInt(value);
         if (value === null || value === undefined || v === 0) {
             //播放
-            let audioClip = (await ResMgrAsync.Instance.IE_GetAsset(
-                AbNames.Sounds,
-                ResCfg.VoiceCfg.bg_music,
-                cc.AudioClip
-            )) as cc.AudioClip;
-            if (audioClip) {
-                SoundMgr.Instance.playBgMusic(audioClip, true);
-                SoundMgr.Instance.setMusicMute(false);
-            }
+            // let audioClip = (await ResMgrAsync.Instance.IE_GetAsset(
+            //     AbNames.Sounds,
+            //     ResCfg.VoiceCfg.bg_music,
+            //     cc.AudioClip
+            // )) as cc.AudioClip;
+            // if (audioClip) {
+            //     SoundMgr.Instance.playBgMusic(audioClip, true);
+            //     SoundMgr.Instance.setMusicMute(false);
+            // }
             // 起始状态
             if (v === null || v === undefined) {
                 SoundMgr.Instance.setMusicMute(false);
@@ -318,11 +318,6 @@ export default class GameLogic extends cc.Component {
             SoundMgr.Instance.setMusicMute(true);
         }
 
-        // let audioClip = ResMgr.Instance.getAsset(AbNames.Sounds, ResCfg.VoiceCfg.bg_music, cc.AudioClip) as cc.AudioClip;
-        // if (audioClip) {
-        //     SoundMgr.Instance.playBgMusic(audioClip, true);
-        //     SoundMgr.Instance.setMusicMute(false);
-        // }
     }
 
     /**

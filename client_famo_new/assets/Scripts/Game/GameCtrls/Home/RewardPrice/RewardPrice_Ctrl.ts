@@ -24,8 +24,6 @@ const { ccclass, property } = cc._decorator;
 export default class RewardPrice_Ctrl extends UIBase {
   scrollview: cc.ScrollView;
   sp_title: cc.Sprite;
-  widget_l: cc.Widget;
-  girdParent: cc.Node;
   labDes: cc.Label;
   viewBg: cc.Node;
   cellItem: cc.Node;
@@ -47,13 +45,9 @@ export default class RewardPrice_Ctrl extends UIBase {
     this.viewBg = this.view["node/bg"] as cc.Node;
     this.viewBg.active = false;
     this.AddButtonListener("node/bg/sp_bg/btn_close", this, this.onCloseBtn);
-    this.scrollview = this.ViewComponent("node/bg/sp_bg/scrollView", cc.ScrollView) as cc.ScrollView;
+    this.scrollview = this.ViewComponent("node/bg/sp_bg/girdBg/scrollView", cc.ScrollView) as cc.ScrollView;
     this.sp_title = this.ViewComponent("node/bg/sp_bg/sp_title", cc.Sprite) as cc.Sprite;
-    this.widget_l = this.ViewComponent("node/bg/sp_bg/scrollView/view/content/layout_view", cc.Widget) as cc.Widget;
-
-    this.girdParent = this.view["node/bg/sp_bg/scrollView/view/content/layout_view/mid"] as cc.Node;
-
-    this.labDes = this.ViewComponent("node/bg/sp_bg/scrollView/view/content/des/lab", cc.Label) as cc.Label;
+    this.labDes = this.ViewComponent("node/bg/sp_bg/girdBg/scrollView/view/content/des/lab", cc.Label) as cc.Label;
 
     this.cellItem = this.view["node/bg/sp_bg/ItemCell"] as cc.Node;
     this.cellItem.active = false;
@@ -79,14 +73,10 @@ export default class RewardPrice_Ctrl extends UIBase {
       let item = cc.instantiate(this.cellItem);
       item.active = true;
       let com = item.addComponent(RewardPriceItem_Ctrl);
-      // let com = await UIMgr.Instance.ShowUIViewAsync(
-      //   ResCfg.Prefabs.RewardPriceItem,
-      //   AbNames.Prefabs,
-      //   this.girdParent
-      // );
-      this.girdParent.addChild(item);
+      this.scrollview.content.addChild(item);
       com.setData(list[i]);
     }
+    this.scrollview.scrollToTop();
   }
 
   public async setData(type: number) {

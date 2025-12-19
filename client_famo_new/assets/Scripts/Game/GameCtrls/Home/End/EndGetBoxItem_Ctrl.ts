@@ -13,9 +13,15 @@ export default class EndGetBoxItem_Ctrl extends UIBase {
   lb_num: cc.Label;
   lab_name: cc.Label;
   lab_price: cc.Label;
+  private _isLoaded: boolean = false;
 
   onLoad() {
     DebugUtils.Log("========EndGetBoxItem_Ctrl.onLoad===========");
+    this._applyData();
+    this._isLoaded = true;
+  }
+
+  private _applyData() {
     super.onLoad();
     this.initUI();
   }
@@ -35,8 +41,8 @@ export default class EndGetBoxItem_Ctrl extends UIBase {
 
   public setData(data: GiftItem): void {
     DebugUtils.Log("========EndGetBoxItem_Ctrl.setData===========", this.lab_name);
-    if (!this.lab_name || !this.lb_num || !this.sp_icon) {
-      this.initUI();
+    if (!this._isLoaded) {
+      this._applyData();
     }
     this.lab_name.string = data.giftName;
     this.lb_num.string = "x" + data.num.toString();

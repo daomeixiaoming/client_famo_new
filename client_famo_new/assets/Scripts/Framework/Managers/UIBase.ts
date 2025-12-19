@@ -30,8 +30,7 @@ export default class UIBase extends cc.Component {
         this.init();
     }
 
-    private async init() {
-        this.audioClip_btn = await ResMgrAsync.Instance.IE_GetAsset(AbNames.Sounds, ResCfg.VoiceCfg.click, cc.AudioClip) as cc.AudioClip;
+    private init() {
     }
 
     /**

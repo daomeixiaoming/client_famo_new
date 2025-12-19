@@ -14,14 +14,19 @@ export default class ShopItem_Ctrl extends UIBase {
     wid: cc.Widget;
     sp_icon: cc.Sprite;
     data: GameMallProductResp = {};
+    private _isLoaded: boolean = false;
 
     onLoad() {
-        super.onLoad();
-        this.initUI();
+        this._applyData();
+        this._isLoaded = true;
     }
 
     start() {
 
+    }
+    private _applyData() {
+        super.onLoad();
+        this.initUI();
     }
 
     private initUI(): void {
@@ -36,7 +41,9 @@ export default class ShopItem_Ctrl extends UIBase {
 
     public setData(udata: GameMallProductResp): void {
         // DebugUtils.Log("==============ShopItem_Ctrl setData======================", udata);
-
+        if (!this._isLoaded) {
+            this._applyData();
+        }
         this.data = GameUtils.DeepClone(udata);
 
         this.lab_name.string = udata.name;

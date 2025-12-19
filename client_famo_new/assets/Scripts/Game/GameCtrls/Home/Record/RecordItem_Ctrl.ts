@@ -12,8 +12,14 @@ export default class RecordItem_Ctrl extends UIBase {
     lab_num1: cc.Label;
     lab_num2: cc.Label;
     lab_num3: cc.Label;
+    private _isLoaded: boolean = false;
 
     onLoad() {
+        this._applyData();
+        this._isLoaded = true;
+    }
+
+    private _applyData() {
         super.onLoad();
         this.initUI();
     }
@@ -25,6 +31,9 @@ export default class RecordItem_Ctrl extends UIBase {
     }
 
     public setData(data: RewardHistoryItem, pos: number): void {
+        if (!this._isLoaded) {
+            this._applyData();
+        }
         let hurt = data.hurt;
         let reward = this.formatNum(data.reward, 0);
         this.lab_num1.string = reward;

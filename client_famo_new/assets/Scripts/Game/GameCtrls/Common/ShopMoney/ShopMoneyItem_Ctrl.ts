@@ -17,8 +17,14 @@ export default class ShopMoneyItem_Ctrl extends UIBase {
     lab_name: cc.Label;
     lab_2: cc.Label;
     data: GameMallProductResp = {};
+    private _isLoaded: boolean = false;
 
     onLoad() {
+        this._applyData();
+        this._isLoaded = true;
+    }
+
+    private _applyData() {
         super.onLoad();
         this.initUI();
     }
@@ -57,6 +63,9 @@ export default class ShopMoneyItem_Ctrl extends UIBase {
     }
 
     public setData(udata: GameMallProductResp): void {
+        if (!this._isLoaded) {
+            this._applyData();
+        }
         this.data = GameUtils.DeepClone(udata);
         // DebugUtils.Log("======ShopMoneyItem_Ctrl.ShopMoneyData==========", udata);
         this.lab_name.string = udata.name + `*${1}${Lngs.One}`;
